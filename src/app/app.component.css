@@ -1,0 +1,16 @@
+mat-sidenav-container{
+  height: 100%;
+}
+
+mat-sidenav, mat-sidenav-content{
+  padding-right: 16px;
+}
+
+mat-sidenav{
+  background-color: lightcoral;
+  width: 200px;
+}
+
+mat-grid-tile{
+  background-color: aqua;
+}
