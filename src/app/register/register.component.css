@@ -15,11 +15,11 @@
   .my-card{  
     width:40%;
     border-radius: 5%;
-    margin-top: 10%;
+    margin-top: 2%;
     top: 50%;
     left:30%;
     max-width:500px;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     position: relative;
   }
   .card-title{
@@ -29,7 +29,7 @@
     text-align: center;
   }
   mat-form-field{
-      margin-top: 2%;
+      margin-top: 1%;
       font-size: medium;
       margin-right: 5%;
       margin-left: 5%;
