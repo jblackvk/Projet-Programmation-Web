@@ -11,14 +11,15 @@
       margin-left: 5%;
       margin-right: 5%;
   }
-  .my-card{  
-    width:50%;
+  .my-card{
     border-radius: 5%;
     margin-top: 10%;
     top: 50%;
-    left:25%;
+    left:30%;
+    width:40%;
     margin-bottom: 10%;
     position: relative;
+    max-width:500px
   }
   .card-title{
     margin-left: 25%; 
@@ -28,7 +29,7 @@
   }
   mat-form-field{
       margin-top: 2%;
-      font-size: medium;
+      font-size: large;
       margin-right: 5%;
       margin-left: 5%;
       left:5%;
@@ -40,3 +41,25 @@
     margin-right: 2%;
   }
   
+  #toHome{
+    margin-left:5%;
+    margin-right:5%; 
+    width:40%;
+    color:indigo;
+    min-width:150px;
+    margin-top:1%
+  }
+  #newAccount{
+    margin-left:5%;
+    margin-right:5%; 
+    width:40%;
+    color:indigo;
+    min-width:150px;
+    margin-top:1%
+  }
+  #connect{
+    margin-left: 30%;
+    width:40%;
+    text-align:center;
+    min-width:130px
+  }
