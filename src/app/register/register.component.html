@@ -1,1 +1,46 @@
-<p>there is register!</p>
+<mat-card class="my-card">
+    <mat-card-title class="card-title">Inscription</mat-card-title>
+    <mat-card-content>
+        <form class="my-form">
+            <mat-form-field class="full-width">
+                <mat-label>Nom & Prénom</mat-label>
+                <input  matInput  placeholder=" Entrez votre Nom Complet ..."  name="nom"  required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Email </mat-label>
+                <input  matInput  placeholder="Entrez votre Email ..." name="email">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Mot de passe</mat-label>
+                <input  matInput  type="password" placeholder="Entrez votre Mot de passe ..."  name="password">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Confirmer votre mot de passe</mat-label>
+                <input  matInput  type="password" placeholder="Retaper votre Mot de passe ..."  name="password">
+            </mat-form-field>
+            <section class="example-section">
+                <label class="example-margin">Sexe :</label>
+                <mat-radio-group >
+                  <mat-radio-button class="example-margin" value="after"> Homme </mat-radio-button>
+                  <mat-radio-button class="example-margin" value="before">Femme</mat-radio-button>
+
+                </mat-radio-group>
+            </section>
+           
+            <mat-form-field>
+                <mat-label>Date De Naissance</mat-label>
+                <input matInput [matDatepicker]="picker" placeholder="Choisir une Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-label id="label">Photo De Profil: </mat-label>
+            <input type="file"  id="avatar">
+            <p>
+                <img id="image" width="140" height="140">
+            </p>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="register()" style="margin-left: 30%;width:40%;text-align:center" color="primary">S' inscrire</button>
+    </mat-card-actions>
+ </mat-card>

@@ -1,3 +1,21 @@
-<p>there is login</p>
-<button mat-raised-button routerLink="Home">gotoHome</button>
-<button mat-raised-button routerLink="register">gotoRegister</button>
+<mat-card class="my-card">
+    <mat-card-title class="card-title">Connectez - Vous </mat-card-title>
+    <mat-card-content>
+        <form class="my-form">
+            <mat-form-field class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Entrez votre Email ..." name="email" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Mot de passe</mat-label>
+                <input  matInput  type="password" placeholder="Entrez votre Mot de passe ..."  name="password" required>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-raised-button style="margin-left: 30%;width:40%;text-align:center" color="primary">Se connecter</button>
+            </mat-card-actions>
+            
+            <a mat-raised-button routerLink="../" style="margin-left:2%;margin-right:8%; width:40%;color:indigo">Allez vers l'accueil</a>
+            <a mat-raised-button routerLink="../register" style="margin-left:8%;margin-right:2%; width:40%;color:indigo">Créez un compte</a>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -14,10 +14,10 @@ import {AuthGuard} from './service/authGuard.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
+  {path: '',  component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'Home', canActivate: [AuthGuard], component: HomeComponent},
-  {path: '',  component: LoginComponent},
+  {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
   {path: 'NOT-FOUND', component: NotFoundComponent},
   {path: '**', redirectTo: '/NOT-FOUND'}
 

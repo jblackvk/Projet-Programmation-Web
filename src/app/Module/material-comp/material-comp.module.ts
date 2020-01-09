@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule,
+import {
+  MatButtonModule,
   MatButtonToggleModule,
   MatIconModule,
   MatBadgeModule,
@@ -10,23 +11,37 @@ import {MatButtonModule,
   MatListModule,
   MatGridListModule,
   MatCardModule,
-  MatTabsModule
+  MatTabsModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatRadioModule,
 } from '@angular/material';
 
 
 const MaterialComponent = [
-  MatButtonModule,
   MatTabsModule,
   MatCardModule,
   MatGridListModule,
-  MatButtonToggleModule,
   MatIconModule,
   MatBadgeModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
   MatMenuModule,
-  MatListModule
+  MatListModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatNativeDateModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatRadioModule,
 ];
 
 
