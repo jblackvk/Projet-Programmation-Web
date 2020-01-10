@@ -1,0 +1,45 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">
+    <mat-form-field>
+      <mat-label>ville</mat-label>
+      <input matInput type="search" placeholder="Entrez une ville ...">
+    </mat-form-field>
+    
+    <div class="location"></div>
+
+    <mat-button-toggle (click)="opened=!opened">Valider</mat-button-toggle>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-button-toggle (click)="opened=!opened">choisir une ville</mat-button-toggle>
+    <h1>{{ville}}</h1>
+    <div class="pluvio"></div>
+    <h1>Température: {{temperature}}{{mesure}}</h1>
+    <h2>{{description}}</h2>
+    <h2>humidité: {{humidite}} %</h2>
+    <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Horaire
+          </ng-template>
+          <mat-card-title-group>
+              <mat-card-title>aujourd'hui</mat-card-title>
+            <mat-card>
+              <mat-card-content>
+                <mat-label>{{hour}}</mat-label>
+                <br>
+                <mat-label>{{temperature}}{{mesure}}</mat-label> 
+                <br>
+                <mat-label>{{humidite}}%</mat-label>
+              </mat-card-content>
+            </mat-card>
+          </mat-card-title-group>
+          
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Hebdomadaire
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+  </mat-sidenav-content>
+</mat-sidenav-container>

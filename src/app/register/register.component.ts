@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor() { }
+  image: string;
+  constructor() { 
+    this.image="../../images/profil.png";
+   }
 
   ngOnInit() {
   }
