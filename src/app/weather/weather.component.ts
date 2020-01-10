@@ -15,6 +15,7 @@ export class WeatherComponent implements OnInit {
   image: string;
   hour: string;
   opened: boolean = false;
+  nbre: number;
   constructor() {
     this.temperature = 27;
     this.mesure = '°C';
@@ -23,6 +24,7 @@ export class WeatherComponent implements OnInit {
     this.image = 'url(../../images/nuageux.png)';
     this.hour = Date();
     this.ville = 'Yaoundé';
+    this.nbre = 8;
   }
 
   ngOnInit() {

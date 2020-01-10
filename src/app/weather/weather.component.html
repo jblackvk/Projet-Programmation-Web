@@ -25,7 +25,7 @@
               <mat-card-title>aujourd'hui</mat-card-title>
             <mat-card>
               <mat-card-content>
-                <mat-label>{{hour}}</mat-label>
+                <mat-label>{{hour | async | date: 'hhmm' }}</mat-label>
                 <br>
                 <mat-label>{{temperature}}{{mesure}}</mat-label> 
                 <br>
