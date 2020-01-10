@@ -10,7 +10,7 @@ import {CentralisationService} from './service/centralisation.service';
 export class AppComponent {
   constructor(private variable: CentralisationService){}
   title = 'projetProgWeb';
-  opened = false;
+  isAuth = false;
   tester() {
    const auth = new AuthentificationModule(this.variable);
   }

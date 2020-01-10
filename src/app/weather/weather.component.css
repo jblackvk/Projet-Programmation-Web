@@ -1,0 +1,42 @@
+mat-tab-group{
+    margin-top: 5%;
+}
+div.pluvio{
+    margin-top:5%;
+    width:256px;
+    height: 256px;
+    margin-left:40%;
+    border-style: solid;
+    background-image: url(../../images/pluie.png);
+    background-size: cover;
+}
+mat-form-field{
+    width:50%;
+    margin-left:25%;
+    margin-top:3%
+}
+mat-sidenav-container{
+}
+mat-sidenav{
+    width:50%;
+}
+h1,h2{
+    width: 100%;
+    text-align: center;
+}
+mat-label{
+    text-align: center;
+}
+div.location{
+    border-style:solid;
+    margin-left:5%; 
+    width:90%;
+    height:70%;
+    margin-bottom:5%;
+    margin-top:2%;
+}
+mat-button-toggle{
+    margin-top:1%;
+    min-width:100px;
+    margin-left: 45%;
+}

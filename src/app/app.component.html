@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
+<mat-toolbar *ngIf="!isAuth" color="primary" style="top:0">
     <mat-toolbar-row>
       <!--  <span>HOME</span> -->
-       <a mat-button routerLink="">ACCUEIL</a>
+       <a mat-button routerLink=""><mat-icon>home</mat-icon>ACCUEIL</a>
        <span class="spacer">Ma Météo</span>
-       <a mat-button routerLink="register">Créez un compte</a>
-       <a mat-button routerLink="login">Se connecter</a>
+       <a mat-button routerLink="register"><mat-icon>account_box</mat-icon>Créez un compte</a>
+       <a mat-button routerLink="login"><mat-icon>people</mat-icon>Se connecter</a>
     </mat-toolbar-row>
   </mat-toolbar>
 <router-outlet></router-outlet>
