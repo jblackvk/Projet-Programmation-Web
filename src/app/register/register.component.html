@@ -1,14 +1,14 @@
 <mat-card class="my-card">
     <mat-card-title class="card-title">Inscription</mat-card-title>
     <mat-card-content>
-        <form class="my-form" [formGroup]="registerForm" >
-            <mat-form-field class="full-width">
+        <form class="my-form"  [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+            <mat-form-field class="full-width" required="">
                 <mat-label>Nom </mat-label>
-                <input  matInput formControlName="name"  placeholder=" Entrez votre Nom Complet ..."  name="nom"  required/>
+                <input  matInput formControlName="nom"  placeholder=" Entrez votre Nom Complet ..."  name="nom" required />
             </mat-form-field>
           <mat-form-field class="full-width">
-            <mat-label> Prénom </mat-label>
-            <input  matInput formControlName="prenom"  placeholder=" Entrez votre Nom Complet ..."  name="nom"  />
+            <mat-label>Prénom </mat-label>
+            <input  matInput formControlName="prenom"  placeholder=" Entrez votre Nom Complet ..."  name="prenom"  />
           </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label> Email </mat-label>
@@ -16,15 +16,15 @@
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Mot de passe</mat-label>
-                <input  matInput formControlName="motDePasse"  type="password" placeholder="Entrez votre Mot de passe ..."  name="password" required/>
+                <input  matInput formControlName="motDePasse"  type="password" placeholder="Entrez votre Mot de passe ..."  name="password" required />
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Confirmer votre mot de passe</mat-label>
-                <input  matInput formControlName="passConfirm" type="password" placeholder="Retaper votre Mot de passe ..."  name="password" required/>
+                <input  matInput formControlName="passConfirm" type="password" placeholder="Retaper votre Mot de passe ..."  name="confirmPassword" required />
             </mat-form-field>
             <section class="example-section">
                 <label class="example-margin">Sexe :</label>
-                <mat-radio-group formControlName="sexe" >
+                <mat-radio-group formControlName="sexe"  required>
                   <mat-radio-button class="example-margin" value="Homme"> Homme </mat-radio-button>
                   <mat-radio-button class="example-margin" value="Femme">Femme</mat-radio-button>
 
@@ -33,16 +33,17 @@
 
             <mat-form-field>
                 <mat-label> Date De Naissance</mat-label>
-                <input matInput formControlName="dateNaissance" [matDatepicker]="picker" placeholder="Choisir une Date">
+                <input matInput formControlName="dateDeNaissance" [matDatepicker]="picker" placeholder="Choisir une Date" required>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-label id="label">Photo De Profil: </mat-label>
-            <input formControlName="photoProfil" (click)="getPhoto()" type="file" name="avatar"  id="avatar" accept="image/gif,image/png,image/jpeg,image/jpg" onchange="readURL(this);">
+            <input formControlName="photoDeProfil" (click)="getPhoto()" type="file" name="avatar"
+                   id="avatar" accept="image/gif,image/png,image/jpeg,image/jpg" onchange="readURL(this);" >
             <img id="image" src="../../assets/profil.png" width=150px height=120px>
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button (click)="register()" style="margin-left: 30%;width:40%;text-align:center" color="primary">S' inscrire</button>
+        <button mat-raised-button [disabled]="registerForm.invalid" style="margin-left: 30%;width:40%;text-align:center" color="primary">S' inscrire</button>
     </mat-card-actions>
  </mat-card>

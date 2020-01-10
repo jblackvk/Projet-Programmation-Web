@@ -2,7 +2,7 @@
     <mat-card-title class="card-title">Connectez - Vous </mat-card-title>
     <mat-card-content>
         <form class="my-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-            <mat-form-field style="margin: auto">
+            <mat-form-field style="margin: auto" >
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email" placeholder="Entrez votre Email ..." name="email" required>
             </mat-form-field>
@@ -14,8 +14,8 @@
                 <button mat-raised-button id="connect" color="primary" [disabled]="userForm.invalid">Se connecter</button>
             </mat-card-actions>
 
-            <a mat-raised-button routerLink="../" id="toHome">Allez vers l'accueil</a>
-            <a mat-raised-button routerLink="../register" id="newAccount">Créez un compte</a>
+            <a mat-raised-button routerLink="home" id="toHome">Allez vers l'accueil</a>
+            <a mat-raised-button routerLink="/register" id="newAccount">Créez un compte</a>
         </form>
     </mat-card-content>
 </mat-card>

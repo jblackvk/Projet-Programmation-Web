@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {InitDbModule} from '../Module/init-db/init-db.module';
+import {CentralisationService} from '../service/centralisation.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private variable: CentralisationService ) { }
 
   ngOnInit() {
+    let initBD = new InitDbModule(this.variable);
+    initBD.dataStore();
   }
 
 }
