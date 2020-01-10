@@ -11,7 +11,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-button-toggle (click)="opened=!opened">choisir une ville</mat-button-toggle>
-    <h1>{{ville}}</h1>
+    <h1>{{pays}}, {{region}}, {{ville}}</h1>
     <div class="pluvio"></div>
     <h1>Température: {{temperature}}{{mesure}}</h1>
     <h2>{{description}}</h2>
@@ -24,8 +24,8 @@
           <mat-card-title-group>
               <mat-card-title>aujourd'hui</mat-card-title>
             <mat-card>
-              <mat-card-content>
-                <mat-label>{{hour | async | date: 'hhmm' }}</mat-label>
+              <mat-card-content *ngFor="let i of nbre">
+                <mat-label>{{hour}}:00</mat-label>
                 <br>
                 <mat-label>{{temperature}}{{mesure}}</mat-label> 
                 <br>
