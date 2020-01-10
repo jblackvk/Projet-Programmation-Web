@@ -12,15 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {AuthGuard} from './service/authGuard.service';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
-  {path: '',  component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'NOT-FOUND', component: NotFoundComponent},
   {path: '**', redirectTo: '/NOT-FOUND'}
-
 ];
 
 
@@ -38,6 +38,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MaterialCompModule,
     RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
   ],
   providers: [
       CentralisationService,

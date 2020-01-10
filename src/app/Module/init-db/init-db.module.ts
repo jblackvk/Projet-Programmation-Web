@@ -13,6 +13,11 @@ import {CentralisationService} from '../../service/centralisation.service';
 export class InitDbModule  {
   constructor(private variable: CentralisationService) {}
   dataStore() {
+    if (!('indexedDB' in Window)) {
+      alert('Desole cette version de votre navigateur ne supporte pas indexedDB, ' +
+        'veuillez l\'update au cas ou une version plus recente le supporterait. ' +
+        '\n voici une liste de navigateur qui supporte indexedDB \n * Google Chome \n * Mozilla Firefox \n * Opera \n * Microsoft Edge' );
+    }
     const index = indexedDB.open(this.variable.dbname);
     index.onupgradeneeded = (e) => {
       // @ts-ignore
