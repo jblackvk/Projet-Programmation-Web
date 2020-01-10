@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private variable: CentralisationService ) { }
 
   ngOnInit() {
-    let initBD = new InitDbModule(this.variable);
+    const initBD = new InitDbModule(this.variable);
     initBD.dataStore();
   }
 

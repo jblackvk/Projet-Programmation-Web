@@ -8,6 +8,8 @@ import { Url } from 'url';
 })
 export class WeatherComponent implements OnInit {
   ville: string;
+  region: string;
+  pays: string;
   temperature: number;
   mesure: string;
   description: string;
@@ -15,14 +17,18 @@ export class WeatherComponent implements OnInit {
   image: string;
   hour: string;
   opened: boolean = false;
+  nbre: number[];
   constructor() {
     this.temperature = 27;
     this.mesure = '°C';
     this.description = 'Nuageux';
     this.humidite = 40;
     this.image = 'url(../../images/nuageux.png)';
-    this.hour = Date();
+    this.hour = Date().substring(15,18);
     this.ville = 'Yaoundé';
+    this.nbre = [1,2,3,4,5,6,7,8];
+    this.region = 'Centre';
+    this.pays = 'Cameroun';
   }
 
   ngOnInit() {
