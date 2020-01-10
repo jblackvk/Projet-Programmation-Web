@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {CentralisationService} from '../service/centralisation.service';
 
 @Component({
   selector: 'app-register',
@@ -6,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  registerForm: FormGroup;
   image: string;
-  constructor() { 
-    this.image="../../images/profil.png";
-   }
+  constructor(private formBuilder: FormBuilder, private variable: CentralisationService) {     this.image = '../../images/profil.png';
+  }
 
   ngOnInit() {
   }

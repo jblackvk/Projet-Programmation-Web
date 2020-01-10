@@ -15,17 +15,17 @@ import {AuthGuard} from './service/authGuard.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LocationComponent } from './location/location.component';
 import { WeatherComponent } from './weather/weather.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
-  {path: '',  component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
   {path: 'location', component: LocationComponent},
   {path: 'weather', component: WeatherComponent},
+  {path: '', component: HomeComponent},
   {path: 'NOT-FOUND', component: NotFoundComponent},
   {path: '**', redirectTo: '/NOT-FOUND'}
-
 ];
 
 
@@ -46,6 +46,7 @@ const appRoutes: Routes = [
     MaterialCompModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
   ],
   providers: [
       CentralisationService,

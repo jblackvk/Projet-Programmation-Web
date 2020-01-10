@@ -1,40 +1,44 @@
 <mat-card class="my-card">
     <mat-card-title class="card-title">Inscription</mat-card-title>
     <mat-card-content>
-        <form class="my-form">
+        <form class="my-form" [formGroup]="registerForm" >
             <mat-form-field class="full-width">
-                <mat-label>Nom & Prénom</mat-label>
-                <input  matInput  placeholder=" Entrez votre Nom Complet ..."  name="nom"  required>
+                <mat-label>Nom </mat-label>
+                <input  matInput formControlName="name"  placeholder=" Entrez votre Nom Complet ..."  name="nom"  required/>
             </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label> Prénom </mat-label>
+            <input  matInput formControlName="prenom"  placeholder=" Entrez votre Nom Complet ..."  name="nom"  />
+          </mat-form-field>
             <mat-form-field class="full-width">
-                <mat-label>Email </mat-label>
-                <input  matInput  placeholder="Entrez votre Email ..." name="email">
+                <mat-label> Email </mat-label>
+                <input  matInput formControlName="email"  placeholder="Entrez votre Email ..." name="email" required/>
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Mot de passe</mat-label>
-                <input  matInput  type="password" placeholder="Entrez votre Mot de passe ..."  name="password">
+                <input  matInput formControlName="motDePasse"  type="password" placeholder="Entrez votre Mot de passe ..."  name="password" required/>
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Confirmer votre mot de passe</mat-label>
-                <input  matInput  type="password" placeholder="Retaper votre Mot de passe ..."  name="password">
+                <input  matInput formControlName="passConfirm" type="password" placeholder="Retaper votre Mot de passe ..."  name="password" required/>
             </mat-form-field>
             <section class="example-section">
                 <label class="example-margin">Sexe :</label>
-                <mat-radio-group >
-                  <mat-radio-button class="example-margin" value="after"> Homme </mat-radio-button>
-                  <mat-radio-button class="example-margin" value="before">Femme</mat-radio-button>
+                <mat-radio-group formControlName="sexe" >
+                  <mat-radio-button class="example-margin" value="Homme"> Homme </mat-radio-button>
+                  <mat-radio-button class="example-margin" value="Femme">Femme</mat-radio-button>
 
                 </mat-radio-group>
             </section>
-           
+
             <mat-form-field>
-                <mat-label>Date De Naissance</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="Choisir une Date">
+                <mat-label> Date De Naissance</mat-label>
+                <input matInput formControlName="dateNaissance" [matDatepicker]="picker" placeholder="Choisir une Date">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-label id="label">Photo De Profil: </mat-label>
-            <input type="file" name="avatar"  id="avatar" accept="image/gif,image/png,image/jpeg,image/jpg" onchange="readURL(this);">
+            <input formControlName="photoProfil" (click)="getPhoto()" type="file" name="avatar"  id="avatar" accept="image/gif,image/png,image/jpeg,image/jpg" onchange="readURL(this);">
             <img id="image" src="../../assets/profil.png" width=150px height=120px>
         </form>
     </mat-card-content>
