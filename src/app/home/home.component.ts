@@ -9,7 +9,7 @@ import {CentralisationService} from '../service/centralisation.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private variable: CentralisationService ) { }
+  constructor(private variable: CentralisationService ) {}
 
   ngOnInit() {
     const initBD = new InitDbModule(this.variable);

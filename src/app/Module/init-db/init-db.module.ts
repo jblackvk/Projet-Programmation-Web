@@ -13,7 +13,7 @@ import {CentralisationService} from '../../service/centralisation.service';
 export class InitDbModule  {
   constructor(private variable: CentralisationService) {}
   dataStore() {
-    if (!('indexedDB' in Window)) {
+    if (!'indexedDB') {
       alert('Desole cette version de votre navigateur ne supporte pas indexedDB, ' +
         'veuillez l\'update au cas ou une version plus recente le supporterait. ' +
         '\n voici une liste de navigateur qui supporte indexedDB \n * Google Chome \n * Mozilla Firefox \n * Opera \n * Microsoft Edge' );
@@ -27,7 +27,7 @@ export class InitDbModule  {
 
        if (!db.objectStoreNames.contains(this.variable.dbTable[0])) {
          const User = db.createObjectStore(this.variable.dbTable[0], {keyPath: 'id', autoIncrement: true});
-         User.createIndex('name', 'name', {unique: false});
+         User.createIndex('nom', 'nom', {unique: false});
          User.createIndex('email', 'email', {unique: true});
        }
 
@@ -36,15 +36,15 @@ export class InitDbModule  {
          Lieu.createIndex('ville', 'ville', {unique : false});
          Lieu.createIndex('pays', 'pays', {unique : false});
        }
-        const Meteo = db.createObjectStore(this.variable.dbTable[2], {keyPath: 'id', autoIncrement : true});
-        Meteo.createIndex('Heure', 'Heure', {unique : false});
-        Meteo.createIndex('Jour', 'Jour', {unique : false});
+       const Meteo = db.createObjectStore(this.variable.dbTable[2], {keyPath: 'id', autoIncrement : true});
+       Meteo.createIndex('Heure', 'Heure', {unique : false});
+       Meteo.createIndex('Jour', 'Jour', {unique : false});
 
 
     };
     index.onsuccess = (e) => {
       // @ts-ignore
-      db = e.target.result;
+      const db = e.target.result;
       console.log('db open');
     };
     index.onerror = () => {

@@ -38,8 +38,11 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     const formValue = this.registerForm.value;
     const registrerer = new LoginModule(this.variable);
-    registrerer.Enregistrer(formValue['nom'], formValue['prenom'],
-      formValue['sexe'], formValue['dateDeNaissance'],
-      formValue['email'], formValue['photoDeProfil'], formValue['motDePasse'] );
+    console.log({nom: formValue['nom'], pre: formValue['prenom'],
+      sexe: formValue['sexe'], age: formValue['dateDeNaissance'].toLocaleDateString(),
+      mail: formValue['email'], photo: formValue['photoDeProfil'], passe: formValue['motDePasse'].toString() });
+    registrerer.dataStore(formValue['nom'], formValue['prenom'],
+      formValue['sexe'], formValue['dateDeNaissance'].toLocaleDateString(),
+      formValue['email'], formValue['photoDeProfil'], formValue['motDePasse']);
   }
 }
