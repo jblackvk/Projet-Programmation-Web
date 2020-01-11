@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {CentralisationService} from '../service/centralisation.service';
 import {LoginModule} from '../Module/login/login.module';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import {LoginModule} from '../Module/login/login.module';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   image: string;
-  constructor(private formBuilder: FormBuilder, private variable: CentralisationService) {}
+  constructor(private formBuilder: FormBuilder, private variable: CentralisationService, private router: Router) {}
 
   ngOnInit() {
     this.initForm();
@@ -44,5 +45,7 @@ export class RegisterComponent implements OnInit {
     registrerer.dataStore(formValue['nom'], formValue['prenom'],
       formValue['sexe'], formValue['dateDeNaissance'].toLocaleDateString(),
       formValue['email'], formValue['photoDeProfil'], formValue['motDePasse']);
+    this.router.navigate(['/login']);
+
   }
 }

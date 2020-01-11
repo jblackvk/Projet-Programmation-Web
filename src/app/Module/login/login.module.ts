@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CentralisationService} from '../../service/centralisation.service';
 import {isNullOrUndefined} from 'util';
+import {Router} from "@angular/router";
 
 
 @NgModule({
@@ -12,7 +13,6 @@ import {isNullOrUndefined} from 'util';
 })
 export class LoginModule {
   db: IDBDatabase;
-
   constructor(private variable: CentralisationService) {
   }
 

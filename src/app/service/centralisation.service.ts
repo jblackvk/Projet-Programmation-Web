@@ -14,7 +14,7 @@ export class CentralisationService implements OnInit {
   public photosLink;
   public url;
   private appid;
-  public isAuth = true;
+  public isAuth = false;
 
    Meteo = {
   temperature : 0 ,
