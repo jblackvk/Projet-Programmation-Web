@@ -1,1 +1,46 @@
-<p>not-found works!</p>
+<mat-toolbar>
+  <mat-toolbar-row>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-accordion  >
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>Ville 1</mat-panel-title>
+      <mat-panel-description>Cameroun</mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="ordered">
+      <div class="button-accodion-expan">
+        <mat-action-row>
+          <button mat-raised-button >Voir la Meteo</button>
+        </mat-action-row>
+      </div>
+      <div class="button-accodion-expan">
+        <mat-action-row>
+          <button mat-raised-button>Supprimer Lieu</button>
+        </mat-action-row>
+      </div>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Ville 1</mat-panel-title>
+      <mat-panel-description>Cameroun</mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <div class="ordered">
+        <div class="button-accodion-expan">
+          <mat-card-actions>
+            <button mat-raised-button >Voir la Meteo</button>
+          </mat-card-actions>
+        </div>
+        <div class="button-accodion-expan">
+          <mat-card-actions>
+            <button mat-raised-button>Supprimer Lieu</button>
+          </mat-card-actions>
+        </div>
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
+

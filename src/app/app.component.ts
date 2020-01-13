@@ -8,7 +8,7 @@ import {CentralisationService} from './service/centralisation.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private variable: CentralisationService){}
+  constructor(private variable: CentralisationService) {}
   title = 'projetProgWeb';
   isAuth = false;
   tester() {

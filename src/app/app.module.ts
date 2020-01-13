@@ -16,6 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LocationComponent } from './location/location.component';
 import { WeatherComponent } from './weather/weather.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
+    MatExpansionModule,
   ],
   providers: [
       CentralisationService,

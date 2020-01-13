@@ -16,7 +16,7 @@ export class WeatherComponent implements OnInit {
   humidite: number;
   image: string;
   hour: string;
-  opened: boolean = false;
+  opened = false;
   nbre: number[];
   constructor() {
     this.temperature = 27;
@@ -34,4 +34,7 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
   }
 
+  onValider() {
+    console.log('champ valider');
+  }
 }
