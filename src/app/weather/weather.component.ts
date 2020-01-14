@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Url } from 'url';
+import * as L from 'leaflet';
 
 @Component({
   selector: 'app-weather',
@@ -18,6 +19,7 @@ export class WeatherComponent implements OnInit {
   hour: string;
   opened = false;
   nbre: number[];
+  private map;
   constructor() {
     this.temperature = 27;
     this.mesure = '°C';
@@ -32,6 +34,22 @@ export class WeatherComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.initMap();
+  }
+
+  private initMap() {
+    const lat = 7.86667;
+    const long = 12.51667;
+    const zoom = 6;
+    this.map = L.map('carteBar').setView([lat, long], zoom);
+
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      minZoom: 3,
+      maxZoom: 19,
+    });
+
+    tiles.addTo(this.map);
   }
 
   onValider() {

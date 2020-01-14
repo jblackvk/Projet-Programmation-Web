@@ -1,6 +1,6 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side"  [(opened)]="opened">
-    <div class="ordered" style="align-items: flex-start;" >
+  <mat-sidenav mode="side" [(opened)]="opened">
+    <div class="ordered" style="align-items: flex-start;">
       <div id="villeBar">
         <mat-form-field appearance="outline" class="input">
           <mat-label>Ville</mat-label>
@@ -14,41 +14,77 @@
           <mat-label>Pays</mat-label>
           <input matInput type="search" value="Cameroun" disabled>
         </mat-form-field>
-       <div>
-         <mat-card-actions>
-           <mat-button-toggle (click)="opened=!opened; onValider()">Valider</mat-button-toggle>
-         </mat-card-actions>
-         <mat-card-actions>
-           <mat-button-toggle (click)="opened=!opened">Fermer</mat-button-toggle>
-         </mat-card-actions>
-       </div>
+        <div>
+          <mat-card-actions>
+            <button mat-raised-button class="btn1" (click)="opened=!opened; onValider()">Valider</button>
+          </mat-card-actions>
+          <mat-card-actions>
+            <button mat-raised-button class="btn1" (click)="opened=!opened">Fermer</button>
+          </mat-card-actions>
+        </div>
       </div>
-      <div class="location" id="carteBar"></div>
+      <div class="map-container">
+        <div class="map-frame">
+          <div id="carteBar"></div>
+        </div>
+      </div>
     </div>
 
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="ordered">
       <div id="meteoAffiche">
-        <h1>{{ville}}, {{region}}, {{pays}}</h1>
-        <div class="ordered">
-          <div class="pluvio"></div>
-          <div id="data">
-            <h1>Température: {{temperature}}{{mesure}}</h1>
-            <h2>{{description}}</h2>
-            <h2>humidité: {{humidite}} %</h2>
+        <div id="principalMeteo">
+          <h1>{{ville}}, {{region}}, {{pays}}</h1>
+          <div class="ordered">
+            <div class="pluvio"></div>
+            <div id="data">
+              <h1>Température: {{temperature}}{{mesure}}</h1>
+              <h2>{{description}}</h2>
+              <h2>humidité: {{humidite}} %</h2>
+            </div>
           </div>
         </div>
+        <div style="border-style: ridge" id="detailMeteo">
+          <mat-tab-group mat-align-tabs="center">
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Horaire
+              </ng-template>
+              <mat-card-title-group>
+                <mat-card-title>aujourd'hui</mat-card-title>
+                <mat-card>
+                  <div class="ordered" id="prevBar">
+                    <mat-card-content *ngFor="let i of nbre" class="meteoPrev">
+                      <mat-label>{{hour}}:00</mat-label>
+                      <br>
+                      <mat-label>{{temperature}}{{mesure}}</mat-label>
+                      <br>
+                      <mat-label>{{humidite}}%</mat-label>
+                    </mat-card-content>
+                  </div>
+                </mat-card>
+              </mat-card-title-group>
+
+
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Hebdomadaire
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
       </div>
-      <div  id="toolbar">
+      <div id="toolbar">
         <div>
           <mat-card-actions>
-            <mat-button-toggle (click)="opened=!opened">choisir une ville</mat-button-toggle>
+            <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
           </mat-card-actions>
         </div>
         <div>
-          <mat-accordion  >
-            <mat-expansion-panel >
+          <mat-accordion>
+            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>Ville 1</mat-panel-title>
                 <mat-panel-description>Cameroun</mat-panel-description>
@@ -56,7 +92,7 @@
               <div class="ordered">
                 <div class="button-accodion-expan">
                   <mat-action-row>
-                    <button mat-raised-button >Voir la Meteo</button>
+                    <button mat-raised-button>Voir la Meteo</button>
                   </mat-action-row>
                 </div>
                 <div class="button-accodion-expan">
@@ -75,7 +111,7 @@
                 <div class="ordered">
                   <div class="button-accodion-expan">
                     <mat-card-actions>
-                      <button mat-raised-button >Voir la Meteo</button>
+                      <button mat-raised-button>Voir la Meteo</button>
                     </mat-card-actions>
                   </div>
                   <div class="button-accodion-expan">
@@ -90,36 +126,6 @@
 
         </div>
       </div>
-    </div>
-    <div style="border-style: ridge">
-      <mat-tab-group mat-align-tabs="center" >
-        <mat-tab >
-          <ng-template mat-tab-label>
-            Horaire
-          </ng-template>
-          <mat-card-title-group>
-            <mat-card-title>aujourd'hui</mat-card-title>
-            <mat-card>
-              <div class="ordered">
-                <mat-card-content *ngFor="let i of nbre" class="meteoPrev">
-                  <mat-label>{{hour}}:00</mat-label>
-                  <br>
-                  <mat-label>{{temperature}}{{mesure}}</mat-label>
-                  <br>
-                  <mat-label>{{humidite}}%</mat-label>
-                </mat-card-content>
-              </div>
-            </mat-card>
-          </mat-card-title-group>
-
-
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            Hebdomadaire
-          </ng-template>
-        </mat-tab>
-      </mat-tab-group>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

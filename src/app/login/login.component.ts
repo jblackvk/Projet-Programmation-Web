@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {variable} from '@angular/compiler/src/output/output_ast';
 import {CentralisationService} from '../service/centralisation.service';
@@ -12,8 +12,10 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   userForm: FormGroup;
-  constructor(  private router: Router,
-                private formBuilder: FormBuilder, private variab: CentralisationService) { }
+
+  constructor(private router: Router,
+              private formBuilder: FormBuilder, private variab: CentralisationService) {
+  }
 
   ngOnInit() {
     this.initForm();
@@ -36,14 +38,21 @@ export class LoginComponent implements OnInit {
       const transact = db.transaction([this.variab.dbTable[0]], 'readwrite');
       const conn = transact.objectStore(this.variab.dbTable[0]);
       const list = conn.index('email');
-      if ( (!isNullOrUndefined(list.get(formValue.email).email))
-        && (list.get(formValue.email).password === formValue.motDePasse) ) {
-        this.variab.isAuth = true;
-      } else {
-        this.variab.isAuth = false;
-      }
+      const userRequest = list.get(formValue.email);
+      userRequest.onsuccess = () => {
+        const user = userRequest.result;
+        if ((!isNullOrUndefined(user.email))
+          && (user.password === formValue.motDePasse)) {
+          this.variab.isAuth = true;
+          window.localStorage.setItem('isAuth', 'true');
+          console.log(this.variab.isAuth);
+          this.router.navigate(['/weather']);
+        } else {
+          this.variab.isAuth = false;
+          console.log(this.variab.isAuth);
+        }
+      };
     };
-    this.router.navigate(['/weather']);
     console.log('submit');
   }
 }

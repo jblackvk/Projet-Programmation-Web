@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthentificationModule} from './Module/authentification/authentification.module';
 import {CentralisationService} from './service/centralisation.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(private variable: CentralisationService) {}
+export class AppComponent implements OnInit {
+  constructor(private variable: CentralisationService, private router: Router) {}
   title = 'projetProgWeb';
-  isAuth = false;
+  isAuth = this.variable.isAuth;
   tester() {
    const auth = new AuthentificationModule(this.variable);
   }
+
+  ngOnInit() {
+    this.variable.isAuth = (localStorage.getItem('isAuth') === 'true');
+    if ( this.isAuth === true) {
+      this.router.navigate(['weather']);
+    }
+  }
+
+
 }

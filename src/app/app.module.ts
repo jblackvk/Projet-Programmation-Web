@@ -22,8 +22,8 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
-  {path: 'location', component: LocationComponent},
-  {path: 'weather', component: WeatherComponent},
+  {path: 'location', canActivate: [AuthGuard], component: LocationComponent},
+  {path: 'weather',  canActivate: [AuthGuard], component: WeatherComponent},
   {path: '', component: HomeComponent},
   {path: 'NOT-FOUND', component: NotFoundComponent},
   {path: '**', redirectTo: '/NOT-FOUND'}
