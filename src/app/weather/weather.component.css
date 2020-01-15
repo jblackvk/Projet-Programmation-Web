@@ -13,6 +13,9 @@ mat-tab-group{
 .meteoPrev{
   min-width: 100px;
 }
+mat-card-title-group{
+  background-color: white;
+}
 
 #prevBar{
   margin-left: 40px;
@@ -28,6 +31,9 @@ mat-tab-group{
   flex: 1;
 }
 
+mat-sidenav-container{
+  background-color: white;
+}
 
 #villeBar{
   flex:2;
@@ -54,10 +60,9 @@ mat-tab-group{
   height: 100%;
 }
 #meteoAffiche{
-  flex: 8;
+  flex: 9;
   max-height: 500px;
   height: available;
-  border-style: ridge;
 }
 #detailMeteo{
   position: relative;
@@ -68,10 +73,14 @@ mat-tab-group{
 
 #principalMeteo{
   flex: 8;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 7%;
+  height: 60%;
 }
 
 #toolbar{
-  flex: 2;
+  flex: 1;
   min-height: 600px;
   height:100%;
   align-items: center;
@@ -97,7 +106,6 @@ div.mat-form-field.input{
 .pluvio{
     width:160px;
     height: 160px;
-    border-style: solid;
     background-image: url(../../images/pluie.png);
     background-size: cover;
 }

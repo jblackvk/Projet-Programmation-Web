@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Url } from 'url';
 import * as L from 'leaflet';
+import { Url } from 'url';
 
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
+
 export class WeatherComponent implements OnInit {
   ville: string;
   region: string;
@@ -38,6 +39,15 @@ export class WeatherComponent implements OnInit {
   }
 
   private initMap() {
+
+
+    $.getJSON(
+      '../listCity/citycameroun.json',
+      (data) => {
+        console.log(data);
+      }
+    );
+
     const lat = 7.86667;
     const long = 12.51667;
     const zoom = 6;
@@ -48,6 +58,7 @@ export class WeatherComponent implements OnInit {
       minZoom: 3,
       maxZoom: 19,
     });
+
 
     tiles.addTo(this.map);
   }
