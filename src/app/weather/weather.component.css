@@ -12,9 +12,13 @@ mat-tab-group{
 
 .meteoPrev{
   min-width: 100px;
+  background-image: initial;
+  background-size: cover;
+
 }
 mat-card-title-group{
-  background-color: white;
+  background-image: initial;
+  background-size: cover;
 }
 
 #prevBar{
@@ -32,7 +36,8 @@ mat-card-title-group{
 }
 
 mat-sidenav-container{
-  background-color: white;
+  background-image: url('../../assets/background.jpg');
+  background-size: cover;
 }
 
 #villeBar{
@@ -84,7 +89,6 @@ mat-sidenav-container{
   min-height: 600px;
   height:100%;
   align-items: center;
-  background-color: white;
 }
 
 #toolbar.div.mat-card-actions{
@@ -106,7 +110,7 @@ div.mat-form-field.input{
 .pluvio{
     width:160px;
     height: 160px;
-    background-image: url(../../images/pluie.png);
+    background-image: url(../../assets/ico-nuageux.png);
     background-size: cover;
 }
 #data{
@@ -147,3 +151,4 @@ button{
   min-width: 200px;
   border-radius: 20px;
 }
+
