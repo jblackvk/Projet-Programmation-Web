@@ -4,11 +4,17 @@
         <div id="villeBar">
           <mat-form-field appearance="outline" class="input">
             <mat-label>Ville</mat-label>
-            <input matInput type="search" placeholder="Entrez une ville ..." required>
+            <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl" placeholder="Entrez une ville ..." required>
+            <mat-autocomplete #village="matAutocomplete" [displayWith]="displayFonction">
+              <mat-option *ngFor="let village of villeFiltree | async" [value]="village.name">{{village.name}}</mat-option>
+            </mat-autocomplete>
           </mat-form-field>
           <mat-form-field appearance="outline" class="input">
             <mat-label>Region</mat-label>
-            <input matInput type="search" placeholder="Entrez une Region ...">
+            <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="region" placeholder="Entrez une Region ...">
+            <mat-autocomplete #region="matAutocomplete" [displayWith]="displayFonction">
+              <mat-option *ngFor="let region of regionFiltree | async " [value]="region">{{region}}</mat-option>
+            </mat-autocomplete>
           </mat-form-field>
           <mat-form-field appearance="outline" class="input">
             <mat-label>Pays</mat-label>
