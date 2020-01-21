@@ -12,10 +12,6 @@ export class AppComponent implements OnInit {
   constructor(private variable: CentralisationService, private router: Router) {}
   title = 'projetProgWeb';
   isAuth = this.variable.isAuth;
-  tester() {
-   const auth = new AuthentificationModule(this.variable);
-  }
-
   ngOnInit() {
     this.variable.isAuth = (localStorage.getItem('isAuth') === 'true');
     if ( this.isAuth === true) {

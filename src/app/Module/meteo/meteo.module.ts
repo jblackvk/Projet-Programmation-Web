@@ -22,7 +22,7 @@ export class MeteoModule {
     index.onsuccess = (e) => {
       // @ts-ignore
       const db = e.target.result;
-      const obj = db.transaction([this.variable.dbname], 'reaadwrite');
+      const obj = db.transaction([this.variable.dbTable[3]], 'readwrite');
       const store = obj.objectStore(this.variable.dbTable[3]);
       store.add(meteo);
     };
