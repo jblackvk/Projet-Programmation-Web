@@ -1,0 +1,101 @@
+.settingsCard {
+  border-radius: 5%;
+  margin-top: 10%;
+  top: 50%;
+  left:30%;
+  width:40%;
+  margin-bottom: 10%;
+  position: relative;
+  max-width:500px
+  }
+  
+  /*.profilImage {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }*/
+  .my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   
+  .full-width {
+    width: 80%;
+  }
+
+  .example-margin{
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+  .my-card{
+    width:40%;
+    border-radius: 5%;
+    margin-top: 2%;
+    top: 50%;
+    left:30%;
+    max-width:500px;
+    margin-bottom: 1%;
+    position: relative;
+  }
+  .card-title{
+    margin-left: 25%;
+    width: 50%; 
+    color:indigo;
+    text-align: center;
+  }
+  mat-form-field{
+      margin-top: 1%;
+      font-size: medium;
+      margin-right: 5%;
+      margin-left: 5%;
+      padding:2%;
+      width:90%;
+  }
+  #label{
+    margin-left:5%;
+    margin-right: 2%;
+  }
+  /*img {
+    margin: 0 0 10px 180px;
+  }*/
+  .fileUpload {
+    background-image: url("../../assets/profil.png");
+    position: relative;
+    overflow: hidden;
+    margin-left: 180px;
+    background-color: #BDBDBD;
+    height: 140px;
+    width: 140px;
+    text-align: center;
+    }
+    .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 100%;
+    text-align: center;
+    }
+    .custom-span{ 
+      font-family: Arial; 
+      font-weight: bold;
+      font-size: 100px; 
+      color: #FE57A1;
+      margin: 0 0 10px 180px;
+    }
+    #uploadFile{
+      border: none;
+      margin-left: 180px;
+      width: 140px;
+    }
+  
+    .custom-para{
+      font-family: arial;
+      font-weight: bold; 
+      color: black;
+    }
