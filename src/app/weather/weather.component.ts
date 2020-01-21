@@ -13,7 +13,7 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./weather.component.css']
 })
 
-export class WeatherComponent implements OnInit{
+export class WeatherComponent implements OnInit {
   ville: string;
   region: string;
   pays: string;
@@ -48,7 +48,7 @@ export class WeatherComponent implements OnInit{
   villeFiltree: Observable<string[]>;
   regionFiltree: Observable<string[]>;
 
-   ngOnInit() {
+  ngOnInit() {
     this.initMap();
     this.initListe();
     this.regionFiltree = this.regionControl.valueChanges.pipe(
@@ -56,17 +56,19 @@ export class WeatherComponent implements OnInit{
       map(value => this._filtreurRegion(value))
     );
   }
+
   async loadVille() {
-    this.villeFiltree = await  this.villeControl.valueChanges.pipe(
+    this.villeFiltree = await this.villeControl.valueChanges.pipe(
       startWith(''),
       map(value => {
         return this.filtreur(value);
       })
     );
   }
+
   _filtreurRegion(valeur: string): string[] {
     const valeurAFiltrer = valeur.toLowerCase();
-    return  this.listeRegion.filter(
+    return this.listeRegion.filter(
       region => region.toLowerCase().includes(valeurAFiltrer));
   }
 
@@ -82,16 +84,26 @@ export class WeatherComponent implements OnInit{
     return objet ? objet.name : undefined;
   }
 
-  private  initListe() {
+  private initListe() {
     const urlListe = 'assets/listCity/citycameroun.json';
     this.jsonLoader.getJson(urlListe).subscribe(
       (resp) => {
         this.listeVille = resp.body;
+        this.listeVille = this.listeVille.sort((a, b) => {
+          if (a.name.toLowerCase() === b.name.toLowerCase() ) {
+            return 0;
+          } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
+            return -1;
+          } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
+            return 1;
+          }
+        });
         console.log(this.listeVille);
         this.loadVille();
       }
     );
   }
+
   private initMap() {
     const lat = 7.86667;
     const long = 12.51667;

@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": ["jqyery"],
     "typeRoots": [
       "node_modules/@types",
       "node_modules/@types/jquery"
