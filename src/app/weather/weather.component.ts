@@ -6,6 +6,8 @@ import {JsonService} from '../service/json.service';
 import {FormControl} from '@angular/forms';
 import {Observable, ObservableInput} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {InitDbModule} from '../Module/init-db/init-db.module';
+import {CentralisationService} from "../service/centralisation.service";
 
 @Component({
   selector: 'app-weather',
@@ -30,7 +32,7 @@ export class WeatherComponent implements OnInit {
     'Ouest', 'Sud', 'Sud Ouest'];
   private mapCarte;
 
-  constructor(private jsonLoader: JsonService) {
+  constructor(private jsonLoader: JsonService, private variable: CentralisationService) {
     this.temperature = 27;
     this.mesure = '°C';
     this.description = 'Nuageux';
@@ -49,6 +51,8 @@ export class WeatherComponent implements OnInit {
   regionFiltree: Observable<string[]>;
 
   ngOnInit() {
+    const initDb = new InitDbModule(this.variable);
+    initDb.dataStore();
     this.initMap();
     this.initListe();
     this.regionFiltree = this.regionControl.valueChanges.pipe(

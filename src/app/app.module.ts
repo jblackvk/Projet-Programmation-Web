@@ -17,9 +17,9 @@ import {LocationComponent} from './location/location.component';
 import {WeatherComponent} from './weather/weather.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {JsonService} from "./service/json.service";
-import {HttpClientModule} from "@angular/common/http";
-import {MatAutocompleteModule} from "@angular/material";
+import {JsonService} from './service/json.service';
+import {HttpClientModule} from '@angular/common/http';
+import {MatAutocompleteModule} from '@angular/material';
 
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
