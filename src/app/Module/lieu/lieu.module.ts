@@ -14,6 +14,7 @@ export class LieuModule {
   private ville;
   private region;
   private pays;
+  public lieu;
   private coordonnee = {
     long: '',
     lat: ''
@@ -26,9 +27,9 @@ export class LieuModule {
       // @ts-ignore
       const db = e.target.result;
       const obj = db.transaction([this.variable.dbTable[1]], 'readwrite');
-      const lieu = obj.objectStore().getAll();
-      lieu.onsuccess = () => {
-        alert('lieu enregistre');
+      const idbRequestLieu = obj.objectStore(this.variable.dbTable[1]).getAll();
+      idbRequestLieu.onsuccess = (event) => {
+        const even = event.target.result;
       };
     };
   }

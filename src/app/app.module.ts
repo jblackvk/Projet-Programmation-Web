@@ -23,6 +23,7 @@ import {MatAutocompleteModule} from '@angular/material';
 import { LieuComponent } from './lieu/lieu.component';
 import {SettingsComponent} from './settings/settings.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     LocationComponent,
     WeatherComponent,
     LieuComponent,
-    SettingsComponent
+    SettingsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ const appRoutes: Routes = [
     MatExpansionModule,
     HttpClientModule,
     MatAutocompleteModule,
-    ScrollingModule
+    ScrollingModule,
+    LeafletModule.forRoot()
   ],
   providers: [
     CentralisationService,

@@ -15,6 +15,7 @@ export class CentralisationService implements OnInit {
   public url;
   private appid = 'e469cd9a36352ce261cd13509a0004d8';
   public isAuth = false;
+  public listeLieu;
 
    Meteo = {
   temperature : 0 ,
@@ -34,7 +35,7 @@ export class CentralisationService implements OnInit {
         this.url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.position.lat}` +
         `&lon=${position.position.long}&units=metric&appid=` + this.appid;
       } else if (position.typeReq === typeRequete.prediction) {
-        this.url = `api.openweathermap.org/data/2.5/forecast?lat=${position.position.lat}` +
+        this.url = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.position.lat}` +
         `&lon=${position.position.long}&units=metric&appid=` + this.appid;
       } else {
         console.log('erreur dans l\'ecriture du type de requete');
@@ -42,9 +43,9 @@ export class CentralisationService implements OnInit {
       }
     } else if (position.typeCoord === typePosition.ville) {
       if (position.typeReq === typeRequete.instant) {
-        this.url = `api.openweathermap.org/data/2.5/weather?q=${position.ville}&units=metric&appid=` + this.appid;
+        this.url = `https://api.openweathermap.org/data/2.5/weather?q=${position.ville}&units=metric&appid=` + this.appid;
       } else if (position.typeReq === typeRequete.prediction) {
-        this.url = `api.openweathermap.org/data/2.5/forecast?q=${position.ville}&units=metric&appid=` + this.appid;
+        this.url = `https://api.openweathermap.org/data/2.5/forecast?q=${position.ville}&units=metric&appid=` + this.appid;
       } else {
         console.log('erreur dans l\'ecriture du type de requete');
       }

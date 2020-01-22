@@ -3,7 +3,7 @@
     <div class="ordered" style="align-items: flex-start;">
       <div id="villeBar">
         <mat-form-field appearance="outline" class="input">
-          <mat-label>Ville</mat-label>
+          <mat-label>{{ville}}</mat-label>
           <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl"
                  placeholder="Entrez une ville ..." required>
           <mat-autocomplete #village="matAutocomplete" [displayWith]="displayFonction">
@@ -12,7 +12,7 @@
           </mat-autocomplete>
         </mat-form-field>
         <mat-form-field appearance="outline" class="input">
-          <mat-label>Region</mat-label>
+          <mat-label>{{region}}</mat-label>
           <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="region"
                  placeholder="Entrez une Region ...">
           <mat-autocomplete #region="matAutocomplete" [displayWith]="displayFonction">
@@ -20,7 +20,7 @@
           </mat-autocomplete>
         </mat-form-field>
         <mat-form-field appearance="outline" class="input">
-          <mat-label>Pays</mat-label>
+          <mat-label>{{pays}}</mat-label>
           <input matInput type="search" value="Cameroun" disabled>
         </mat-form-field>
         <div>
@@ -93,8 +93,8 @@
         </div>
         <mat-accordion itemSize="30">
             <div>
-              <app-lieu  *ngFor="let nb of nbre" [pays]="'Cameroun'" [region]="'centre'" class="appLieu"
-                        [position]="posTest" [ville]="'yaounde'"></app-lieu>
+              <app-lieu  *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
+                        [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>
             </div>
         </mat-accordion>
       </div>
