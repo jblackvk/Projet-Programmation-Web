@@ -1,0 +1,12 @@
+
+mat-expansion-panel, mat-accordion{
+  width: 100%;
+  margin-bottom: 0.5px;
+}
+
+.ordered{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}

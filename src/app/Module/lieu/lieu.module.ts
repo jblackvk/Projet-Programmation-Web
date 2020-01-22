@@ -33,6 +33,32 @@ export class LieuModule {
     };
   }
 
+  getLieuFixe(li) {
+    const index = indexedDB.open(this.variable.dbname);
+    index.onsuccess = (e) => {
+      // @ts-ignore
+      const db = e.target.result;
+      const obj = db.transaction([this.variable.dbTable[1]], 'readwrite');
+      const lieu = obj.objectStore(this.variable.dbTable[1]).index('ville').get(li);
+      lieu.onsuccess = () => {
+      };
+      return lieu;
+
+    };
+  }
+
+  deleteLieu(nom) {
+    const index = indexedDB.open(this.variable.dbname);
+    index.onsuccess = (e) => {
+      // @ts-ignore
+      const db = e.target.result;
+      const obj = db.transaction([this.variable.dbTable[1]], 'readwrite');
+      const store = obj.objectStore(this.variable.dbTable[1]);
+      const ind = store.index('ville');
+      store.delete(ind.get(nom).id);
+    };
+  }
+
   setLieu(lieu: Lieu) {
     const index = indexedDB.open(this.variable.dbname);
     index.onsuccess = (e) => {

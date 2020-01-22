@@ -15,6 +15,17 @@ import {toNumbers} from '@angular/compiler-cli/src/diagnostics/typescript_versio
 
 
 export class MeteoModule {
+  met = {
+    temperature: 0,
+  pression: 0,
+  humidite: 0,
+  description: '',
+  Lieu: '',
+  Heure: '',
+  jour: '',
+  icon: '',
+  };
+
   constructor(private variable: CentralisationService) {}
 
   setMeteo(meteo: Meteo) {
@@ -31,59 +42,56 @@ export class MeteoModule {
     };
   }
 
-  getMeteoNow(position: Position): string {
-    console.log('Meteo actuelle');
+  getMeteoNow(position: Position): any {
     // tslint:disable-next-line:prefer-const
-    let met: Meteo;
+    this.variable.setUrl(position);
     const xhttp = new XMLHttpRequest();
+    // tslint:disable-next-line:only-arrow-functions
     xhttp.onreadystatechange = () => {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
-        console.log('envoie de la requette');
         const response = JSON.parse(xhttp.responseText);
-        met.temperature = response.main.temp;
-        met.pression = response.main.pressure;
-        met.humidite = response.main.humidity;
-        met.description = response.wheater[0].description;
-        met.icon = response.wheater[0].icon;
-        met.Lieu = response.name;
-        met.Heure = position.heure;
-        met.jour = position.jour;
+        this.met.temperature = response.main.temp;
+        this.met.pression = response.main.pressure;
+        this.met.humidite = response.main.humidity;
+        this.met.description = response.weather[0].description;
+        this.met.icon = response.weather[0].icon;
+        this.met.Lieu = response.name;
+        this.met.Heure = position.heure;
+        this.met.jour = position.jour;
       }
+    };
+    xhttp.onloadend = () => {
     };
     xhttp.open('GET', this.variable.url);
     xhttp.send();
-    if (isNullOrUndefined(met)) {
-      this.setMeteo(met);
-      return 'good';
-    } else {
-      return 'nous ne parvenons pas a trouver la meteo que vous rechercher';
-    }
-
   }
 
-  getMeteoPredict(position: Position) {
-    console.log('prevision 1');
+  getMeteoPredict(position: Position): any {
+    console.log('prevision');
     // tslint:disable-next-line:prefer-const
-    let met: Meteo;
+    let metPredict: Meteo;
+    const metPf: Meteo[] = [];
     const xhttp = new XMLHttpRequest();
+    this.variable.setUrl(position);
     xhttp.onreadystatechange = () => {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
         console.log('envoie de la requette');
         const response = JSON.parse(xhttp.responseText);
         const liste = response.list;
         for (let i = 0; i < liste.lenght ; i++ ) {
-          met.temperature = liste[i].main.temp;
-          met.pression = liste[i].main.pressure;
-          met.humidite = liste[i].main.humidity;
-          met.description = liste[i].wheater[0].description;
-          met.icon = liste.wheater[0].icon;
-          met.Lieu = response.city.name;
+          metPredict.temperature = liste[i].main.temp;
+          metPredict.pression = liste[i].main.pressure;
+          metPredict.humidite = liste[i].main.humidity;
+          metPredict.description = liste[i].weather[0].description;
+          metPredict.icon = liste.weather[0].icon;
+          metPredict.Lieu = response.city.name;
           const dateTime = response.list[i].dt_txt;
-          met.Heure = this.traductHour(dateTime.substr(11, dateTime.length));
-          met.jour = dateTime.substr(0, 10);
-          this.setMeteo(met);
+          metPredict.Heure = this.traductHour(dateTime.substr(11, dateTime.length));
+          metPredict.jour = dateTime.substr(0, 10);
+          this.setMeteo(metPredict);
+          metPf.push(metPredict);
         }
-
+        return metPf;
       }
     };
     xhttp.open('GET', this.variable.url);
@@ -98,8 +106,8 @@ export class MeteoModule {
       case  0:
       case 1:
         // tslint:disable-next-line:no-unused-expression
-       heur = Heure['00H00'] ;
-       break;
+        heur = Heure['00H00'] ;
+        break;
       case 2:
       case 3:
         heur = Heure['02H00'] ;
@@ -110,8 +118,8 @@ export class MeteoModule {
         break;
       case 6:
       case 7:
-       heur = Heure['06H00'];
-       break;
+        heur = Heure['06H00'];
+        break;
       case 8:
       case 9:
         heur = Heure['08H00'];
@@ -152,22 +160,26 @@ export class MeteoModule {
 
 enum Heure { '00H00', '02H00', '04H00', '06H00', '08H00', '10H00', '12H00',
   '14H00', '16H00', '18H00', '20H00', '22H00', '24H00'}
-
-interface Position {
-  lat: number;
-  long: number;
-  heure: Heure;
-  jour: string;
-}
-
 interface Meteo {
   temperature: number;
   pression: number;
   humidite: number;
   description: string;
   Lieu: string;
-  Heure: Heure;
-  jour: string;
+  Heure: any;
+  jour: any;
   icon: string;
+}
+enum typePosition {'coordonnee', 'ville' }
+enum typeRequete {'instant', 'prediction'}
+enum langue {'fr',  'en'}
+interface Position {
+  position: any;
+  ville: string;
+  heure: any;
+  jour: any;
+  langue: langue;
+  typeCoord: typePosition;
+  typeReq: typeRequete;
 }
 

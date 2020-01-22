@@ -7,7 +7,9 @@ import {FormControl} from '@angular/forms';
 import {Observable, ObservableInput} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {InitDbModule} from '../Module/init-db/init-db.module';
-import {CentralisationService} from "../service/centralisation.service";
+import {CentralisationService} from '../service/centralisation.service';
+import {MeteoModule} from '../Module/meteo/meteo.module';
+import {LieuModule} from "../Module/lieu/lieu.module";
 
 @Component({
   selector: 'app-weather',
@@ -27,6 +29,16 @@ export class WeatherComponent implements OnInit {
   hour: string;
   opened = false;
   nbre: number[];
+  posTest = {
+    lat: 7.86667,
+    long: 12.51667
+  };
+  Meteo;
+  Coordonnees = {
+    lat: 7.86667,
+    long: 12.51667,
+  };
+  MeteoPrev;
   listeVille;
   listeRegion = ['Adamaoua', 'Centre', 'Est', 'Extreme Nord', 'Littoral', 'Nord', 'Nord Ouest',
     'Ouest', 'Sud', 'Sud Ouest'];
@@ -53,12 +65,36 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
     const initDb = new InitDbModule(this.variable);
     initDb.dataStore();
+    this.initMeteo();
+    console.log(this.Meteo);
     this.initMap();
     this.initListe();
     this.regionFiltree = this.regionControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filtreurRegion(value))
     );
+  }
+  initMeteo() {
+    const initMeteo = new MeteoModule(this.variable);
+    navigator.geolocation.getCurrentPosition((posi) => {
+      this.Coordonnees.lat = posi.coords.latitude;
+      this.Coordonnees.long = posi.coords.longitude;
+    });
+    const date = new Date();
+    const pos = {
+      position: this.Coordonnees,
+      ville: '',
+      heure: date.getTime(),
+      jour: date.getDate(),
+      langue: langue.fr,
+      typeCoord: typePosition.coordonnee,
+      typeReq: typeRequete.instant
+    };
+    const init = initMeteo.getMeteoNow(pos);
+    this.Meteo = initMeteo.met;
+    const lieu = new LieuModule(this.variable);
+    const local = lieu.getLieuFixe(initMeteo.met.Lieu);
+    // @ts-ignore
   }
 
   async loadVille() {
@@ -94,7 +130,7 @@ export class WeatherComponent implements OnInit {
       (resp) => {
         this.listeVille = resp.body;
         this.listeVille = this.listeVille.sort((a, b) => {
-          if (a.name.toLowerCase() === b.name.toLowerCase() ) {
+          if (a.name.toLowerCase() === b.name.toLowerCase()) {
             return 0;
           } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
             return -1;
@@ -102,7 +138,6 @@ export class WeatherComponent implements OnInit {
             return 1;
           }
         });
-        console.log(this.listeVille);
         this.loadVille();
       }
     );
@@ -135,4 +170,17 @@ interface VilleModele {
     lon: number,
     lat: number
   };
+}
+
+enum typePosition {'coordonnee', 'ville' }
+enum typeRequete {'instant', 'prediction'}
+enum langue {'fr',  'en'}
+interface Position {
+  position: any;
+  ville: string;
+  heure: any;
+  jour: any;
+  langue: langue;
+  typeCoord: typePosition;
+  typeReq: typeRequete;
 }

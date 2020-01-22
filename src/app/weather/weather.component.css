@@ -32,7 +32,7 @@ mat-card-title-group{
   justify-content: center;
 }
 .button-accodion-expan{
-  flex: 1;
+  flex: 2;
 }
 
 mat-sidenav-container{
@@ -85,7 +85,7 @@ mat-sidenav-container{
 }
 
 #toolbar{
-  flex: 1;
+  flex: 2;
   min-height: 600px;
   height:100%;
   align-items: center;
@@ -96,7 +96,9 @@ mat-sidenav-container{
   align-content: center;
 }
 
-
+.appLieu{
+  margin-bottom: 5px;
+}
 
 
 
@@ -110,7 +112,6 @@ div.mat-form-field.input{
 .pluvio{
     width:160px;
     height: 160px;
-    background-image: url(../../assets/ico-nuageux.png);
     background-size: cover;
 }
 #data{

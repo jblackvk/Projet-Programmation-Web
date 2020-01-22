@@ -19,10 +19,8 @@ export class InitDbModule {
         'veuillez l\'update au cas ou une version plus recente le supporterait. ' +
         '\n voici une liste de navigateur qui supporte indexedDB \n * Google Chome \n * Mozilla Firefox \n * Opera \n * Microsoft Edge');
     } else {
-      alert('indexed cool');
       const index = indexedDB.open(this.variable.dbname);
       index.onupgradeneeded = (e) => {
-        console.log('upgrade...');
         // @ts-ignore
         const db = e.target.result;
         if (!db.objectStoreNames.contains(this.variable.dbTable[2])) {

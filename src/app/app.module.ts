@@ -20,6 +20,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {JsonService} from './service/json.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MatAutocompleteModule} from '@angular/material';
+import { LieuComponent } from './lieu/lieu.component';
+import {SettingsComponent} from './settings/settings.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -41,7 +44,9 @@ const appRoutes: Routes = [
     HomeComponent,
     NotFoundComponent,
     LocationComponent,
-    WeatherComponent
+    WeatherComponent,
+    LieuComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,7 @@ const appRoutes: Routes = [
     MatExpansionModule,
     HttpClientModule,
     MatAutocompleteModule,
+    ScrollingModule
   ],
   providers: [
     CentralisationService,

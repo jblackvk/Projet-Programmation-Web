@@ -1,137 +1,103 @@
-  <mat-sidenav-container>
-    <mat-sidenav mode="side" [(opened)]="opened">
-      <div class="ordered" style="align-items: flex-start;">
-        <div id="villeBar">
-          <mat-form-field appearance="outline" class="input">
-            <mat-label>Ville</mat-label>
-            <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl" placeholder="Entrez une ville ..." required>
-            <mat-autocomplete #village="matAutocomplete" [displayWith]="displayFonction">
-              <mat-option *ngFor="let village of villeFiltree | async" [value]="village.name">{{village.name}}</mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="input">
-            <mat-label>Region</mat-label>
-            <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="region" placeholder="Entrez une Region ...">
-            <mat-autocomplete #region="matAutocomplete" [displayWith]="displayFonction">
-              <mat-option *ngFor="let region of regionFiltree | async " [value]="region">{{region}}</mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="input">
-            <mat-label>Pays</mat-label>
-            <input matInput type="search" value="Cameroun" disabled>
-          </mat-form-field>
-          <div>
-            <mat-card-actions>
-              <button mat-raised-button class="btn1" (click)="opened=!opened; onValider()">Valider</button>
-            </mat-card-actions>
-            <mat-card-actions>
-              <button mat-raised-button class="btn1" (click)="opened=!opened">Fermer</button>
-            </mat-card-actions>
-          </div>
-        </div>
-        <div class="map-container">
-          <div class="map-frame">
-            <div id="carteBar"></div>
-          </div>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">
+    <div class="ordered" style="align-items: flex-start;">
+      <div id="villeBar">
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Ville</mat-label>
+          <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl"
+                 placeholder="Entrez une ville ..." required>
+          <mat-autocomplete #village="matAutocomplete" [displayWith]="displayFonction">
+            <mat-option *ngFor="let village of villeFiltree | async"
+                        [value]="village.name">{{village.name}}</mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Region</mat-label>
+          <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="region"
+                 placeholder="Entrez une Region ...">
+          <mat-autocomplete #region="matAutocomplete" [displayWith]="displayFonction">
+            <mat-option *ngFor="let region of regionFiltree | async " [value]="region">{{region}}</mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Pays</mat-label>
+          <input matInput type="search" value="Cameroun" disabled>
+        </mat-form-field>
+        <div>
+          <mat-card-actions>
+            <button mat-raised-button class="btn1" (click)="opened=!opened; onValider()">Valider</button>
+          </mat-card-actions>
+          <mat-card-actions>
+            <button mat-raised-button class="btn1" (click)="opened=!opened">Fermer</button>
+          </mat-card-actions>
         </div>
       </div>
+      <div class="map-container">
+        <div class="map-frame">
+          <div id="carteBar"></div>
+        </div>
+      </div>
+    </div>
 
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="ordered">
-        <div id="meteoAffiche">
-          <div id="principalMeteo">
-            <h1>{{ville}}, {{region}}, {{pays}}</h1>
-            <div class="ordered">
-              <div class="pluvio"></div>
-              <div id="data">
-                <h1>Température: {{temperature}}{{mesure}}</h1>
-                <h2>{{description}}</h2>
-                <h2>humidité: {{humidite}} %</h2>
-              </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="ordered">
+      <div id="meteoAffiche">
+        <div id="principalMeteo">
+          <h1>{{Meteo.Lieu}}, {{pays}} </h1>
+          <div class="ordered">
+            <img class="pluvio" src="https://openweathermap.org/img/wn/{{Meteo.icon}}@2x.png"/>
+            <div id="data">
+              <h1>Température: {{Meteo.temperature}}{{mesure}}</h1>
+              <h2>{{Meteo.description}}</h2>
+              <h2>humidité: {{Meteo.humidite}} %</h2>
             </div>
           </div>
-          <div  id="detailMeteo">
-            <mat-tab-group mat-align-tabs="center">
-              <mat-tab>
-                <ng-template mat-tab-label>
-                  Horaire
-                </ng-template>
-                <mat-card-title-group>
-                  <mat-card-title>aujourd'hui</mat-card-title>
-                  <mat-card>
-                    <div class="ordered" id="prevBar">
-                      <mat-card-content *ngFor="let i of nbre" class="meteoPrev">
-                        <mat-label class="meteoPrev">{{hour}}:00</mat-label>
-                        <br>
-                        <mat-label>{{temperature}}{{mesure}}</mat-label>
-                        <br>
-                        <mat-label>{{humidite}}%</mat-label>
-                      </mat-card-content>
-                    </div>
-                  </mat-card>
-                </mat-card-title-group>
-
-
-              </mat-tab>
-              <mat-tab>
-                <ng-template mat-tab-label>
-                  Hebdomadaire
-                </ng-template>
-              </mat-tab>
-            </mat-tab-group>
-          </div>
         </div>
-        <div id="toolbar">
-          <div>
-            <mat-card-actions>
-              <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
-            </mat-card-actions>
-          </div>
-          <div>
-            <mat-accordion>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>Ville 1</mat-panel-title>
-                  <mat-panel-description>Cameroun</mat-panel-description>
-                </mat-expansion-panel-header>
-                <div class="ordered">
-                  <div class="button-accodion-expan">
-                    <mat-action-row>
-                      <button mat-raised-button>Voir la Meteo</button>
-                    </mat-action-row>
+        <div id="detailMeteo">
+          <mat-tab-group mat-align-tabs="center">
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Horaire
+              </ng-template>
+              <mat-card-title-group>
+                <mat-card-title>aujourd'hui</mat-card-title>
+                <mat-card>
+                  <div class="ordered" id="prevBar">
+                    <mat-card-content *ngFor="let i of nbre" class="meteoPrev">
+                      <mat-label class="meteoPrev">{{hour}}:00</mat-label>
+                      <br>
+                      <mat-label>{{temperature}}{{mesure}}</mat-label>
+                      <br>
+                      <mat-label>{{humidite}}%</mat-label>
+                    </mat-card-content>
                   </div>
-                  <div class="button-accodion-expan">
-                    <mat-action-row>
-                      <button mat-raised-button>Supprimer Lieu</button>
-                    </mat-action-row>
-                  </div>
-                </div>
-              </mat-expansion-panel>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>Ville 1</mat-panel-title>
-                  <mat-panel-description>Cameroun</mat-panel-description>
-                </mat-expansion-panel-header>
-                <ng-template matExpansionPanelContent>
-                  <div class="ordered">
-                    <div class="button-accodion-expan">
-                      <mat-card-actions>
-                        <button mat-raised-button>Voir la Meteo</button>
-                      </mat-card-actions>
-                    </div>
-                    <div class="button-accodion-expan">
-                      <mat-card-actions>
-                        <button mat-raised-button>Supprimer Lieu</button>
-                      </mat-card-actions>
-                    </div>
-                  </div>
-                </ng-template>
-              </mat-expansion-panel>
-            </mat-accordion>
+                </mat-card>
+              </mat-card-title-group>
 
-          </div>
+
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Hebdomadaire
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
         </div>
       </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+      <div id="toolbar">
+        <div>
+          <mat-card-actions>
+            <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
+          </mat-card-actions>
+        </div>
+        <mat-accordion itemSize="30">
+            <div>
+              <app-lieu  *ngFor="let nb of nbre" [pays]="'Cameroun'" [region]="'centre'" class="appLieu"
+                        [position]="posTest" [ville]="'yaounde'"></app-lieu>
+            </div>
+        </mat-accordion>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
