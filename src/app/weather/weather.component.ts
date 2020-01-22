@@ -9,7 +9,7 @@ import {map, startWith} from 'rxjs/operators';
 import {InitDbModule} from '../Module/init-db/init-db.module';
 import {CentralisationService} from '../service/centralisation.service';
 import {MeteoModule} from '../Module/meteo/meteo.module';
-import {LieuModule} from "../Module/lieu/lieu.module";
+import {LieuModule} from '../Module/lieu/lieu.module';
 
 @Component({
   selector: 'app-weather',
@@ -145,7 +145,9 @@ export class WeatherComponent implements OnInit {
 
   private initMap() {
     const lat = 7.86667;
+    let lat1 = 7.86667;
     const long = 12.51667;
+    let long1 = 12.51667;
     const zoom = 6;
     this.mapCarte = L.map('carteBar').setView([lat, long], zoom);
 
@@ -155,30 +157,30 @@ export class WeatherComponent implements OnInit {
       maxZoom: 19,
     });
     tiles.addTo(this.mapCarte);
-    var marker = L.marker([7.86667,12.51667]).addTo(this.mapCarte);
-    var xhttp = new XMLHttpRequest();
+    let marker = L.marker([lat1, long1]).addTo(this.mapCarte);
+    const xhttp = new XMLHttpRequest();
     this.mapCarte.on('click', (e) => {
-        let lat = e.latlng.lat;
-        let long = e.latlng.lng;
+        lat1 = e.latlng.lat;
+        long1 = e.latlng.lng;
 
 
-        let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat + "&lon=" + long + "";
+        const url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=' + lat + '&lon=' + long + '';
         xhttp.onreadystatechange = () => {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 console.log('envoie de la requette');
                 console.log(xhttp.responseType);
-                let reponse = JSON.parse(xhttp.response);
-                let ville = reponse.display_name;
+                const reponse = JSON.parse(xhttp.response);
+                const ville = reponse.display_name;
 
                 console.log('latitude' + lat + 'lonngitude' + long);
                 this.mapCarte.removeLayer(marker);
-                marker = L.marker([lat, long])
-                let popup = marker.addTo(this.mapCarte);
+                marker = L.marker([lat, long]);
+                const popup = marker.addTo(this.mapCarte);
                 popup.bindPopup(ville).openPopup();
 
 
             }
-        }
+        };
         xhttp.open('GET', url, true);
         xhttp.send();
 

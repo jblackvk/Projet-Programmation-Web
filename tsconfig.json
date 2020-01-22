@@ -11,9 +11,13 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "types": ["jqyery"],
+    "types": [
+      "jqyery"
+    ],
     "typeRoots": [
       "node_modules/@types",
+      "node_modules/@types/jest",
+      "node_modules/@types/mocha",
       "node_modules/@types/jquery"
     ],
     "lib": [
