@@ -41,7 +41,7 @@ export class LieuComponent implements OnInit {
 
     position1 = {
       position: '',
-      ville: this.ville,
+      ville: this.ville.split(' ')[0],
       heure: date.getTime(),
       jour: date.getDate(),
       langue: langue.fr,
@@ -57,8 +57,8 @@ export class LieuComponent implements OnInit {
       typeCoord: typePosition.ville,
       typeReq: typeRequete.prediction
     };
-    this.changeMeteo.emit(this.meteo.getMeteoNow(position1));
-    this.changemeteoPredAff.emit(this.meteo.getMeteoPredict(position2));
+    this.changeMeteo.emit(position1);
+    this.changemeteoPredAff.emit(position2);
   }
 }
 enum Heure { '00H00', '02H00', '04H00', '06H00', '08H00', '10H00', '12H00',

@@ -5,10 +5,10 @@
         <mat-form-field appearance="outline" class="input">
           <mat-label>{{ville}}</mat-label>
           <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl"
-                 placeholder="Entrez une ville ..." required>
-          <mat-autocomplete #village="matAutocomplete" [displayWith]="displayFonction">
+                 placeholder="Entrez une ville ..." required [innerText]="texte">
+          <mat-autocomplete id="ville" #village="matAutocomplete" [displayWith]="displayFonction">
             <mat-option *ngFor="let village of villeFiltree | async"
-                        [value]="village.name">{{village.name}}</mat-option>
+                        [value]="village.name" (click)="cliquer()">{{village.name}}</mat-option>
           </mat-autocomplete>
         </mat-form-field>
         <mat-form-field appearance="outline" class="input">
@@ -93,7 +93,7 @@
         </div>
         <mat-accordion itemSize="30">
             <div>
-              <app-lieu  *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
+              <app-lieu (changeMeteo)="setMeteo($event)"  *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
                         [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>
             </div>
         </mat-accordion>

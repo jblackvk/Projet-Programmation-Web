@@ -56,6 +56,7 @@ export class WeatherComponent implements OnInit {
   regionControl = new FormControl();
   villeFiltree: Observable<string[]>;
   regionFiltree: Observable<string[]>;
+  texte: any;
 
   ngOnInit() {
     const index = indexedDB.open(this.variable.dbname);
@@ -103,6 +104,13 @@ export class WeatherComponent implements OnInit {
     // @ts-ignore
   }
 
+  setMeteo(event) {
+    const initMeteo = new MeteoModule(this.variable);
+    console.log(event);
+    const data = event;
+    const init = initMeteo.getMeteoNow(data);
+    this.Meteo = initMeteo.met;
+  }
   async loadVille() {
     this.villeFiltree = await this.villeControl.valueChanges.pipe(
       startWith(''),
@@ -228,9 +236,13 @@ export class WeatherComponent implements OnInit {
   onValider() {
     console.log('champ valider');
   }
+
+  cliquer() {
+
 }
 
-interface VilleModele {
+
+/*interface VilleModele:{
   id: number;
   name: string;
   country: string;
@@ -238,7 +250,7 @@ interface VilleModele {
     lon: number,
     lat: number
   };
-}
+}*/
 
 enum typePosition {'coordonnee', 'ville' }
 
