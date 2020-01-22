@@ -5,7 +5,7 @@
         <mat-form-field appearance="outline" class="input">
           <mat-label>{{ville}}</mat-label>
           <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl"
-                 placeholder="Entrez une ville ..." required [innerText]="texte">
+                 placeholder="Entrez une ville ..." required >
           <mat-autocomplete id="ville" #village="matAutocomplete" [displayWith]="displayFonction">
             <mat-option *ngFor="let village of villeFiltree | async"
                         [value]="village.name" (click)="cliquer()">{{village.name}}</mat-option>

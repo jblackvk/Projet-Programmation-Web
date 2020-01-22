@@ -20,7 +20,7 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 })
 
 export class WeatherComponent implements OnInit {
-    lieuDeChange;
+  lieuDeChange;
   ville = 'ville';
   addins: false;
   region = 'region';
@@ -111,12 +111,11 @@ export class WeatherComponent implements OnInit {
     const init = initMeteo.getMeteoNow(data);
     this.Meteo = initMeteo.met;
   }
-  async loadVille() {
-    this.villeFiltree = await this.villeControl.valueChanges.pipe(
+
+  loadVille() {
+    this.villeFiltree = this.villeControl.valueChanges.pipe(
       startWith(''),
-      map(value => {
-        return this.filtreur(value);
-      })
+      map(value => this.filtreur(value))
     );
   }
 
@@ -208,11 +207,11 @@ export class WeatherComponent implements OnInit {
             }
           };
           popup.on('click', () => {
-            this.ville =  Local.ville;
+            this.ville = Local.ville;
             this.region = Local.region;
             this.pays = Local.pays;
             this.openDialog(Local);
-          } );
+          });
         }
       };
       xhttp.open('GET', url, true);
@@ -238,11 +237,15 @@ export class WeatherComponent implements OnInit {
   }
 
   cliquer() {
+    const champVille = document.getElementById('ville');
+
+  }
+
+
+
 
 }
-
-
-/*interface VilleModele:{
+interface VilleModele {
   id: number;
   name: string;
   country: string;
@@ -250,8 +253,7 @@ export class WeatherComponent implements OnInit {
     lon: number,
     lat: number
   };
-}*/
-
+}
 enum typePosition {'coordonnee', 'ville' }
 
 enum typeRequete {'instant', 'prediction'}
