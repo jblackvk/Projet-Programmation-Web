@@ -155,6 +155,34 @@ export class WeatherComponent implements OnInit {
       maxZoom: 19,
     });
     tiles.addTo(this.mapCarte);
+    var marker = L.marker([7.86667,12.51667]).addTo(this.mapCarte);
+    var xhttp = new XMLHttpRequest();
+    this.mapCarte.on('click', (e) => {
+        let lat = e.latlng.lat;
+        let long = e.latlng.lng;
+
+
+        let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat + "&lon=" + long + "";
+        xhttp.onreadystatechange = () => {
+            if (xhttp.readyState === 4 && xhttp.status === 200) {
+                console.log('envoie de la requette');
+                console.log(xhttp.responseType);
+                let reponse = JSON.parse(xhttp.response);
+                let ville = reponse.display_name;
+
+                console.log('latitude' + lat + 'lonngitude' + long);
+                this.mapCarte.removeLayer(marker);
+                marker = L.marker([lat, long])
+                let popup = marker.addTo(this.mapCarte);
+                popup.bindPopup(ville).openPopup();
+
+
+            }
+        }
+        xhttp.open('GET', url, true);
+        xhttp.send();
+
+    });
   }
 
   onValider() {
