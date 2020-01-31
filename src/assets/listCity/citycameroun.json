@@ -2,7 +2,7 @@
   {
     "id": 2224928,
     "name": "Néméyong II",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.5,
       "lat": 2.91667
@@ -11,7 +11,7 @@
   {
     "id": 2230362,
     "name": "Kélkoto",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.16667,
       "lat": 4.43333
@@ -20,7 +20,7 @@
    {
     "id": 2221394,
     "name": "Tonga",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.7,
       "lat": 4.96667
@@ -29,7 +29,7 @@
    {
     "id": 2228675,
     "name": "Mamfe",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.3123,
       "lat": 5.754
@@ -38,7 +38,7 @@
   {
     "id": 2228005,
     "name": "Mbanga",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.5671,
       "lat": 4.5016
@@ -47,7 +47,7 @@
   {
     "id": 2235409,
     "name": "Atog-Boga",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.51667,
       "lat": 3.33333
@@ -56,7 +56,7 @@
   {
     "id": 2221789,
     "name": "South Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.75,
       "lat": 2.5
@@ -65,7 +65,7 @@
   {
     "id": 2232486,
     "name": "Doumomama",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.11667,
       "lat": 3.58333
@@ -74,7 +74,7 @@
   {
     "id": 2231326,
     "name": "Garga Sarali",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.05,
       "lat": 5.33333
@@ -83,7 +83,7 @@
   {
     "id": 2231494,
     "name": "Fouy",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.21667,
       "lat": 5.31667
@@ -92,7 +92,7 @@
   {
     "id": 6730148,
     "name": "Barawa Ladé",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.14697,
       "lat": 10.24521
@@ -101,7 +101,7 @@
   {
     "id": 2231755,
     "name": "Far North Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.5,
       "lat": 11
@@ -110,7 +110,7 @@
   {
     "id": 2221789,
     "name": "South Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.75,
       "lat": 2.5
@@ -119,7 +119,7 @@
   {
     "id": 2229798,
     "name": "Kousseri",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 15.03063,
       "lat": 12.07689
@@ -128,7 +128,7 @@
   {
     "id": 2221530,
     "name": "Tibati",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.63333,
       "lat": 6.46667
@@ -137,7 +137,7 @@
   {
     "id": 2221607,
     "name": "Tchollire",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.1698,
       "lat": 8.4022
@@ -146,7 +146,7 @@
   {
     "id": 2222230,
     "name": "Sangmelima",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.98333,
       "lat": 2.93333
@@ -155,7 +155,7 @@
   {
     "id": 2222623,
     "name": "Penja",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.67987,
       "lat": 4.63911
@@ -164,7 +164,7 @@
   {
     "id": 2223293,
     "name": "Obala",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.53333,
       "lat": 4.16667
@@ -173,7 +173,7 @@
   {
     "id": 2223734,
     "name": "Nkoteng",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.03333,
       "lat": 4.51667
@@ -182,7 +182,7 @@
   {
     "id": 2223763,
     "name": "Nkongsamba",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.9404,
       "lat": 4.9547
@@ -191,7 +191,7 @@
   {
     "id": 2225457,
     "name": "Nanga Eboko",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.36667,
       "lat": 4.68333
@@ -200,7 +200,7 @@
   {
     "id": 2225726,
     "name": "Muyuka",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.4103,
       "lat": 4.2898
@@ -209,7 +209,7 @@
   {
     "id": 2225728,
     "name": "Mutengene",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.3144,
       "lat": 4.0913
@@ -218,7 +218,7 @@
   {
     "id": 2225991,
     "name": "Mora",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.14011,
       "lat": 11.04611
@@ -227,7 +227,7 @@
   {
     "id": 2226275,
     "name": "Mokolo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.80188,
       "lat": 10.73978
@@ -236,7 +236,7 @@
   {
     "id": 2227230,
     "name": "Melong",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.96143,
       "lat": 5.1218
@@ -245,7 +245,7 @@
   {
     "id": 2227402,
     "name": "Meiganga",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.3,
       "lat": 6.51667
@@ -254,7 +254,7 @@
   {
     "id": 2227613,
     "name": "Mbouda",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.25517,
       "lat": 5.62578
@@ -263,7 +263,7 @@
   {
     "id": 2228028,
     "name": "Mbandjok",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.9,
       "lat": 4.45
@@ -272,7 +272,7 @@
   {
     "id": 2228499,
     "name": "Manjo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.8217,
       "lat": 4.8428
@@ -281,7 +281,7 @@
   {
     "id": 2229152,
     "name": "Loum",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.7351,
       "lat": 4.7182
@@ -290,7 +290,7 @@
   {
     "id": 2229267,
     "name": "Lolodorf",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.73333,
       "lat": 3.23333
@@ -299,7 +299,7 @@
   {
     "id": 2229411,
     "name": "Limbe",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.2149,
       "lat": 4.0242
@@ -308,7 +308,7 @@
   {
     "id": 2229681,
     "name": "Lagdo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.73333,
       "lat": 9.05
@@ -317,7 +317,7 @@
   {
     "id": 2229748,
     "name": "Kumbo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.66667,
       "lat": 6.2
@@ -326,7 +326,7 @@
   {
     "id": 2229761,
     "name": "Kribi",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.91667,
       "lat": 2.95
@@ -335,7 +335,7 @@
   {
     "id": 2230599,
     "name": "Kaele",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.45083,
       "lat": 10.10917
@@ -344,7 +344,7 @@
   {
     "id": 2230876,
     "name": "Guider",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.94861,
       "lat": 9.93417
@@ -353,7 +353,7 @@
   {
     "id": 2231482,
     "name": "Fundong",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.26667,
       "lat": 6.25
@@ -362,7 +362,7 @@
   {
     "id": 2231564,
     "name": "Fontem",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.8818,
       "lat": 5.4685
@@ -371,7 +371,7 @@
   {
     "id": 2233805,
     "name": "Bogo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.60928,
       "lat": 10.7336
@@ -380,7 +380,7 @@
   {
     "id": 2234794,
     "name": "Banyo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.81667,
       "lat": 6.75
@@ -389,7 +389,7 @@
   {
     "id": 2221053,
     "name": "Wum",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.06667,
       "lat": 6.38333
@@ -398,7 +398,7 @@
   {
     "id": 2231835,
     "name": "East Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14,
       "lat": 4
@@ -407,7 +407,7 @@
   {
     "id": 2233376,
     "name": "Centre Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12,
       "lat": 4.75
@@ -416,7 +416,7 @@
   {
     "id": 2236015,
     "name": "Adamaoua Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.5,
       "lat": 6.5
@@ -425,7 +425,7 @@
   {
     "id": 2235669,
     "name": "Aman",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.33333,
       "lat": 6.36667
@@ -434,7 +434,7 @@
   {
     "id": 2233238,
     "name": "Dankali",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.25,
       "lat": 6.4
@@ -443,7 +443,7 @@
    {
     "id": 2220852,
     "name": "Yokassala",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.44157,
       "lat": 6.46252
@@ -452,7 +452,7 @@
   {
     "id": 2231564,
     "name": "Fontem",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.8818,
       "lat": 5.4685
@@ -461,7 +461,7 @@
   {
     "id": 2233805,
     "name": "Bogo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.60928,
       "lat": 10.7336
@@ -470,7 +470,7 @@
   {
     "id": 2234794,
     "name": "Banyo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.81667,
       "lat": 6.75
@@ -479,7 +479,7 @@
   {
     "id": 2224827,
     "name": "Ngaoundere",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.58333,
       "lat": 7.31667
@@ -488,7 +488,7 @@
   {
     "id": 2231319,
     "name": "Garoua Boulai",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.55,
       "lat": 5.88333
@@ -497,7 +497,7 @@
   {
     "id": 2233387,
     "name": "Republic of Cameroon",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12,
       "lat": 6
@@ -506,7 +506,7 @@
   {
     "id": 2234359,
     "name": "Bertoua",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.68333,
       "lat": 4.58333
@@ -515,7 +515,7 @@
    {
     "id": 2220957,
     "name": "Yaounde",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.51667,
       "lat": 3.86667
@@ -524,7 +524,7 @@
   {
     "id": 2229336,
     "name": "Littoral Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10,
       "lat": 4
@@ -533,7 +533,7 @@
   {
     "id": 2232593,
     "name": "Douala",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.70428,
       "lat": 4.04827
@@ -542,7 +542,7 @@
   {
     "id": 2228079,
     "name": "Mbalmayo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.5,
       "lat": 3.51667
@@ -551,7 +551,7 @@
   {
     "id": 2235748,
     "name": "Akwa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.7,
       "lat": 4.05
@@ -560,7 +560,7 @@
   {
     "id": 2232239,
     "name": "Edea",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.13333,
       "lat": 3.8
@@ -569,7 +569,7 @@
   {
     "id": 2232239,
     "name": "Edea",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.13333,
       "lat": 3.8
@@ -578,7 +578,7 @@
   {
     "id": 2222934,
     "name": "West Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.5,
       "lat": 5.5
@@ -587,7 +587,7 @@
   {
     "id": 2235189,
     "name": "Bafoussam",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.41786,
       "lat": 5.47366
@@ -596,7 +596,7 @@
   {
     "id": 2232283,
     "name": "Ebolowa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.15,
       "lat": 2.9
@@ -605,7 +605,7 @@
   {
     "id": 2223602,
     "name": "North-West Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.5,
       "lat": 6.33333
@@ -614,7 +614,7 @@
   {
     "id": 2234974,
     "name": "Bamenda",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.15824,
       "lat": 5.95266
@@ -623,7 +623,7 @@
   {
     "id": 2231538,
     "name": "Foto",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.06226,
       "lat": 5.45878
@@ -632,7 +632,7 @@
   {
     "id": 2221788,
     "name": "South-West Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.33333,
       "lat": 5.41667
@@ -641,7 +641,7 @@
   {
     "id": 2233410,
     "name": "Buea",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.241,
       "lat": 4.1527
@@ -650,7 +650,7 @@
   {
     "id": 2229752,
     "name": "Kumba",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.4469,
       "lat": 4.6363
@@ -659,7 +659,7 @@
   {
     "id": 2221504,
     "name": "Tiko",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.3699,
       "lat": 4.0745
@@ -668,7 +668,7 @@
   {
     "id": 2223603,
     "name": "North Region",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14,
       "lat": 8.5
@@ -677,7 +677,7 @@
   {
     "id": 2231320,
     "name": "Garoua",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.4,
       "lat": 9.3
@@ -686,7 +686,7 @@
   {
     "id": 2228373,
     "name": "Maroua",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.31592,
       "lat": 10.59095
@@ -695,7 +695,7 @@
   {
     "id": 2231565,
     "name": "Fontain",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.91667,
       "lat": 5.73333
@@ -704,7 +704,7 @@
   {
     "id": 2234536,
     "name": "Belabo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.3,
       "lat": 4.93333
@@ -713,7 +713,7 @@
   {
     "id": 7109573,
     "name": "Djo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.41705,
       "lat": 5.34332
@@ -722,7 +722,7 @@
   {
     "id": 2223638,
     "name": "Nlongo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.93333,
       "lat": 4.95
@@ -731,7 +731,7 @@
   {
     "id": 2233252,
     "name": "Dang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.23333,
       "lat": 4.75
@@ -740,7 +740,7 @@
   {
     "id": 2232652,
     "name": "Dombé",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.91667,
       "lat": 2.95
@@ -749,7 +749,7 @@
   {
     "id": 2234663,
     "name": "Batouri",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.36667,
       "lat": 4.43333
@@ -758,7 +758,7 @@
   {
     "id": 2224513,
     "name": "Ngoulmokong",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.61667,
       "lat": 3.16667
@@ -767,7 +767,7 @@
   {
     "id": 2221046,
     "name": "Yabassi",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.96822,
       "lat": 4.45697
@@ -776,7 +776,7 @@
   {
     "id": 2224162,
     "name": "Nkan",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.66667,
       "lat": 2.66667
@@ -785,7 +785,7 @@
   {
     "id": 2225712,
     "name": "Mvan",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.51667,
       "lat": 3.81667
@@ -794,7 +794,7 @@
   {
     "id": 2231926,
     "name": "Enongal",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.18333,
       "lat": 2.88333
@@ -803,7 +803,7 @@
   {
     "id": 2235186,
     "name": "Bafut",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.1,
       "lat": 6.08333
@@ -812,7 +812,7 @@
   {
     "id": 2229673,
     "name": "Laïndé",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.41667,
       "lat": 9.33333
@@ -821,7 +821,7 @@
   {
     "id": 2227808,
     "name": "Mbi Djoro",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.56667,
       "lat": 7.38333
@@ -830,7 +830,7 @@
   {
     "id": 7110232,
     "name": "Nkoutaba",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.74339,
       "lat": 5.63075
@@ -839,7 +839,7 @@
   {
     "id": 2222312,
     "name": "Salak",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.25251,
       "lat": 10.45935
@@ -848,7 +848,7 @@
   {
     "id": 2221030,
     "name": "Yagoua",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 15.23288,
       "lat": 10.34107
@@ -857,7 +857,7 @@
   {
     "id": 2223306,
     "name": "Nzinbé",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.36667,
       "lat": 4.46667
@@ -866,7 +866,7 @@
   {
     "id": 2230600,
     "name": "Kaelé",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.44651,
       "lat": 10.10672
@@ -875,7 +875,7 @@
   {
     "id": 2234353,
     "name": "Besongabang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.29875,
       "lat": 5.70735
@@ -884,7 +884,7 @@
   {
     "id": 2224922,
     "name": "New Bell",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.7215,
       "lat": 4.0354
@@ -893,7 +893,7 @@
   {
     "id": 2594997,
     "name": "Ndongo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.3483,
       "lat": 4.0792
@@ -902,7 +902,7 @@
   {
     "id": 2222518,
     "name": "Pongo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.98333,
       "lat": 2.86667
@@ -911,7 +911,7 @@
   {
     "id": 2231504,
     "name": "Foumbot",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.6356,
       "lat": 5.50787
@@ -920,7 +920,7 @@
   {
     "id": 2231506,
     "name": "Foumban",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.90011,
       "lat": 5.7291
@@ -929,7 +929,7 @@
   {
     "id": 2231881,
     "name": "Eseka",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.76667,
       "lat": 3.65
@@ -938,7 +938,7 @@
   {
     "id": 2232444,
     "name": "Dschang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.055,
       "lat": 5.44559
@@ -947,7 +947,7 @@
   {
     "id": 2232997,
     "name": "Dizangue",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.98333,
       "lat": 3.76667
@@ -956,7 +956,7 @@
   {
     "id": 2234865,
     "name": "Bangangte",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.51975,
       "lat": 5.14091
@@ -965,7 +965,7 @@
   {
     "id": 2234941,
     "name": "Bamusso",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 8.9027,
       "lat": 4.4591
@@ -974,7 +974,7 @@
   {
     "id": 2235029,
     "name": "Bali",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.01248,
       "lat": 5.88724
@@ -983,7 +983,7 @@
   {
     "id": 2235194,
     "name": "Bafia",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.23333,
       "lat": 4.75
@@ -992,7 +992,7 @@
   {
     "id": 2235196,
     "name": "Bafang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.17882,
       "lat": 5.15625
@@ -1001,7 +1001,7 @@
   {
     "id": 2235776,
     "name": "Akonolinga",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.25,
       "lat": 3.76667
@@ -1010,7 +1010,7 @@
   {
     "id": 2594800,
     "name": "Idenao",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.00472,
       "lat": 4.2475
@@ -1019,7 +1019,7 @@
   {
     "id": 2220849,
     "name": "Yoko",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.31667,
       "lat": 5.53333
@@ -1028,7 +1028,7 @@
   {
     "id": 2220853,
     "name": "Yokadouma",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 15.05,
       "lat": 3.51667
@@ -1037,7 +1037,7 @@
   {
     "id": 2221513,
     "name": "Tignere",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.65,
       "lat": 7.36667
@@ -1046,7 +1046,7 @@
   {
     "id": 2222366,
     "name": "Saa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.45,
       "lat": 4.36667
@@ -1055,7 +1055,7 @@
   {
     "id": 2222439,
     "name": "Rey Bouba",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.1786,
       "lat": 8.6724
@@ -1064,7 +1064,7 @@
   {
     "id": 2222539,
     "name": "Poli",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.25,
       "lat": 8.48333
@@ -1073,7 +1073,7 @@
   {
     "id": 2222568,
     "name": "Pitoa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.53333,
       "lat": 9.38333
@@ -1082,7 +1082,7 @@
   {
     "id": 2223162,
     "name": "Ombesa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.25,
       "lat": 4.6
@@ -1091,7 +1091,7 @@
   {
     "id": 2223216,
     "name": "Okola",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.38333,
       "lat": 4.01667
@@ -1100,7 +1100,7 @@
   {
     "id": 2223226,
     "name": "Okoa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.6,
       "lat": 3.98333
@@ -1109,7 +1109,7 @@
   {
     "id": 2223421,
     "name": "Ntui",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.63333,
       "lat": 4.45
@@ -1118,7 +1118,7 @@
   {
     "id": 2224212,
     "name": "Njinikom",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.28333,
       "lat": 6.23333
@@ -1127,7 +1127,7 @@
   {
     "id": 2224413,
     "name": "Nguti",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.4185,
       "lat": 5.3299
@@ -1136,7 +1136,7 @@
   {
     "id": 2224584,
     "name": "Ngoro",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.38333,
       "lat": 4.95
@@ -1145,7 +1145,7 @@
   {
     "id": 2224641,
     "name": "Ngomedzap",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.2,
       "lat": 3.25
@@ -1154,7 +1154,7 @@
   {
     "id": 2224863,
     "name": "Ngambe",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.61667,
       "lat": 4.23333
@@ -1163,7 +1163,7 @@
   {
     "id": 2225263,
     "name": "Ndikinimeki",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.83333,
       "lat": 4.76667
@@ -1172,7 +1172,7 @@
   {
     "id": 2225325,
     "name": "Ndelele",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.93333,
       "lat": 4.03333
@@ -1181,7 +1181,7 @@
   {
     "id": 2225703,
     "name": "Mvangue",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.51667,
       "lat": 2.96667
@@ -1190,7 +1190,7 @@
   {
     "id": 2225745,
     "name": "Mundemba",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 8.8724,
       "lat": 4.9479
@@ -1199,7 +1199,7 @@
   {
     "id": 2225940,
     "name": "Mouanko",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.77694,
       "lat": 3.63972
@@ -1208,7 +1208,7 @@
   {
     "id": 2226441,
     "name": "Mme-Bafumen",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.23333,
       "lat": 6.33333
@@ -1217,7 +1217,7 @@
   {
     "id": 2226515,
     "name": "Minta",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.8,
       "lat": 4.58333
@@ -1226,7 +1226,7 @@
   {
     "id": 2226641,
     "name": "Mindif",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.43626,
       "lat": 10.39757
@@ -1235,7 +1235,7 @@
   {
     "id": 2227853,
     "name": "Mbengwi",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10,
       "lat": 6.01667
@@ -1244,7 +1244,7 @@
   {
     "id": 2227980,
     "name": "Mbankomo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.38333,
       "lat": 3.78333
@@ -1253,7 +1253,7 @@
   {
     "id": 2228019,
     "name": "Mbang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.33333,
       "lat": 4.58333
@@ -1262,7 +1262,7 @@
   {
     "id": 2228881,
     "name": "Makary",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.46662,
       "lat": 12.5717
@@ -1271,7 +1271,7 @@
   {
     "id": 2229780,
     "name": "Koza",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.87855,
       "lat": 10.87079
@@ -1280,7 +1280,7 @@
   {
     "id": 2230028,
     "name": "Kontcha",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 12.23333,
       "lat": 7.96667
@@ -1289,7 +1289,7 @@
   {
     "id": 2230285,
     "name": "Bankim",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.4905,
       "lat": 6.08303
@@ -1298,7 +1298,7 @@
   {
     "id": 2230641,
     "name": "Jakiri",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.65,
       "lat": 6.1
@@ -1307,7 +1307,7 @@
   {
     "id": 2231775,
     "name": "Evodoula",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.2,
       "lat": 4.08333
@@ -1316,7 +1316,7 @@
   {
     "id": 2231851,
     "name": "Esse",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.9,
       "lat": 4.1
@@ -1325,7 +1325,7 @@
   {
     "id": 2232497,
     "name": "Doume",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.45,
       "lat": 4.23333
@@ -1334,7 +1334,7 @@
   {
     "id": 2232774,
     "name": "Djohong",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.7,
       "lat": 6.83333
@@ -1343,7 +1343,7 @@
   {
     "id": 2233056,
     "name": "Dimako",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.56667,
       "lat": 4.38333
@@ -1352,7 +1352,7 @@
   {
     "id": 2233100,
     "name": "Dibombari",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.6561,
       "lat": 4.1787
@@ -1361,7 +1361,7 @@
   {
     "id": 2233118,
     "name": "Diang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.01667,
       "lat": 4.25
@@ -1370,7 +1370,7 @@
   {
     "id": 2233704,
     "name": "Bonaberi",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.6759,
       "lat": 4.0779
@@ -1379,7 +1379,7 @@
   {
     "id": 2234339,
     "name": "Betare Oya",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.08333,
       "lat": 5.6
@@ -1388,7 +1388,7 @@
   {
     "id": 2234455,
     "name": "Belo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.25,
       "lat": 6.13333
@@ -1397,7 +1397,7 @@
   {
     "id": 2234520,
     "name": "Belel",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 14.43333,
       "lat": 7.05
@@ -1406,7 +1406,7 @@
   {
     "id": 2234545,
     "name": "Bekondo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.3214,
       "lat": 4.6819
@@ -1415,7 +1415,7 @@
   {
     "id": 2234635,
     "name": "Bazou",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.46978,
       "lat": 5.05695
@@ -1424,7 +1424,7 @@
   {
     "id": 2234684,
     "name": "Batibo",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.8553,
       "lat": 5.8358
@@ -1433,7 +1433,7 @@
   {
     "id": 2234803,
     "name": "Bansoa",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.31514,
       "lat": 5.44718
@@ -1442,7 +1442,7 @@
   {
     "id": 2234842,
     "name": "Ngou",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.38441,
       "lat": 5.1959
@@ -1451,7 +1451,7 @@
   {
     "id": 2234904,
     "name": "Bandjoun",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.41816,
       "lat": 5.37878
@@ -1460,7 +1460,7 @@
   {
     "id": 2234936,
     "name": "Bana",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.2762,
       "lat": 5.1481
@@ -1469,7 +1469,7 @@
   {
     "id": 2234968,
     "name": "Bamendjou",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.33161,
       "lat": 5.38875
@@ -1478,7 +1478,7 @@
   {
     "id": 2235293,
     "name": "Babanki",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.25,
       "lat": 6.11667
@@ -1487,7 +1487,7 @@
   {
     "id": 2235660,
     "name": "Ambam",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.28333,
       "lat": 2.38333
@@ -1496,7 +1496,7 @@
   {
     "id": 2235780,
     "name": "Akono",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.33333,
       "lat": 3.5
@@ -1505,7 +1505,7 @@
   {
     "id": 2235814,
     "name": "Akom II",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 10.56667,
       "lat": 2.78333
@@ -1514,7 +1514,7 @@
   {
     "id": 2236053,
     "name": "Abong Mbang",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 13.18333,
       "lat": 3.98333
@@ -1523,7 +1523,7 @@
   {
     "id": 2595172,
     "name": "Ndom",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 9.5628,
       "lat": 4.4978
@@ -1532,7 +1532,7 @@
   {
     "id": 6620518,
     "name": "Somie",
-    "country": "CM",
+    "country": "Cameroun",
     "coord": {
       "lon": 11.43299,
       "lat": 6.45843

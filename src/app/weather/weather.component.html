@@ -1,22 +1,22 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)]="opened">
     <div class="ordered" style="align-items: flex-start;">
-      <div id="villeBar">
+      <form id="villeBar">
         <mat-form-field appearance="outline" class="input">
           <mat-label>{{ville}}</mat-label>
           <input matInput type="search" [matAutocomplete]="village" [formControl]="villeControl"
                  placeholder="Entrez une ville ..." required >
-          <mat-autocomplete id="ville" #village="matAutocomplete" [displayWith]="displayFonction">
+          <mat-autocomplete id="ville" autoActiveFirstOption #village="matAutocomplete" [displayWith]="displayFonction">
             <mat-option *ngFor="let village of villeFiltree | async"
-                        [value]="village.name" (click)="cliquer()">{{village.name}}</mat-option>
+                      [value]="village.name"  >{{village.name}}</mat-option>
           </mat-autocomplete>
         </mat-form-field>
         <mat-form-field appearance="outline" class="input">
           <mat-label>{{region}}</mat-label>
-          <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="region"
+          <input matInput type="search" [formControl]="regionControl" [matAutocomplete]="regionComplete"
                  placeholder="Entrez une Region ...">
-          <mat-autocomplete #region="matAutocomplete" [displayWith]="displayFonction">
-            <mat-option *ngFor="let region of regionFiltree | async " [value]="region">{{region}}</mat-option>
+          <mat-autocomplete #regionComplete="matAutocomplete"  autoActiveFirstOption>
+            <mat-option *ngFor="let regions of regionFiltree | async " [value]="regions" >{{regions}}</mat-option>
           </mat-autocomplete>
         </mat-form-field>
         <mat-form-field appearance="outline" class="input">
@@ -28,10 +28,10 @@
             <button mat-raised-button class="btn1" (click)="opened=!opened; onValider()">Valider</button>
           </mat-card-actions>
           <mat-card-actions>
-            <button mat-raised-button class="btn1" (click)="opened=!opened">Fermer</button>
+            <button mat-raised-button class="btn1" (click)="refresh(); opened=!opened; ">Fermer</button>
           </mat-card-actions>
         </div>
-      </div>
+      </form>
       <div class="map-container">
         <div class="map-frame">
           <div id="carteBar"></div>
@@ -91,11 +91,27 @@
             <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
           </mat-card-actions>
         </div>
-        <mat-accordion itemSize="30">
-            <div>
-              <app-lieu (changeMeteo)="setMeteo($event)"  *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
-                        [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>
+        <mat-accordion class="accordeon" itemSize="30">
+             <!-- <app-lieu (changeMeteo)="setMeteo($event)" (refresh)="refresh()" *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
+                        [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>-->
+          <mat-expansion-panel *ngFor="let lieu of listeLieu">
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-right: 10px">{{lieu.ville}}</mat-panel-title>
+              <mat-panel-description>{{lieu.pays}}</mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="ordered">
+              <div class="button-accodion-expan">
+                <mat-action-row>
+                  <button mat-raised-button (click)="ville = lieu.ville ; pays=lieu.pays; voirMeteo(); ">Voir la Meteo</button>
+                </mat-action-row>
+              </div>
+              <div class="button-accodion-expan">
+                <mat-action-row>
+                  <button mat-raised-button (click)="ville = lieu.ville; supprimerLieu()">Supprimer Lieu</button>
+                </mat-action-row>
+              </div>
             </div>
+          </mat-expansion-panel>
         </mat-accordion>
       </div>
     </div>

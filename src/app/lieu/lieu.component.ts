@@ -23,6 +23,7 @@ export class LieuComponent implements OnInit {
   meteo;
   @Output() changeMeteo = new EventEmitter();
   @Output() changemeteoPredAff = new EventEmitter();
+  @Output() refresh = new EventEmitter();
   constructor(private variable: CentralisationService) { }
 
   ngOnInit() {
@@ -32,6 +33,7 @@ export class LieuComponent implements OnInit {
 
   supprimerLieu() {
    this.lieu.deleteLieu(this.ville);
+   this.refresh.emit(true);
   }
 
   voirMeteo() {

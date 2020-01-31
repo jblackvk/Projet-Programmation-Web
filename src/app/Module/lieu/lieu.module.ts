@@ -57,11 +57,11 @@ export class LieuModule {
       const obj = db.transaction([this.variable.dbTable[1]], 'readwrite');
       const store = obj.objectStore(this.variable.dbTable[1]);
       const ind = store.index('ville');
-      const inst = ind.get(nom).result;
-      inst.onsuccess(() => {
-        console.log(ind.get(nom));
-        store.delete(inst.position);
-      });
+      const inst = ind.get(nom);
+      inst.onsuccess = () => {
+        console.log(inst.result);
+        store.delete(inst.result.position);
+      };
     };
   }
 

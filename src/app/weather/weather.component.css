@@ -31,9 +31,6 @@ mat-card-title-group{
   text-align: center;
   justify-content: center;
 }
-.button-accodion-expan{
-  flex: 2;
-}
 
 mat-sidenav-container{
   background-image: url('../../assets/background.jpg');
@@ -85,7 +82,7 @@ mat-sidenav-container{
 }
 
 #toolbar{
-  flex: 2;
+  flex: 3;
   min-height: 600px;
   height:100%;
   align-items: center;
@@ -151,5 +148,15 @@ button{
   height: 50px;
   min-width: 200px;
   border-radius: 20px;
+}
+
+.accordeon .mat-expansion-panel-header-title,
+.accordeon .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.accordeon .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
 }
 
