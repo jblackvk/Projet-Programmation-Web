@@ -91,28 +91,33 @@
             <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
           </mat-card-actions>
         </div>
-        <mat-accordion class="accordeon" itemSize="30">
-             <!-- <app-lieu (changeMeteo)="setMeteo($event)" (refresh)="refresh()" *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
-                        [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>-->
-          <mat-expansion-panel *ngFor="let lieu of listeLieu">
-            <mat-expansion-panel-header>
-              <mat-panel-title style="margin-right: 10px">{{lieu.ville}}</mat-panel-title>
-              <mat-panel-description>{{lieu.pays}}</mat-panel-description>
-            </mat-expansion-panel-header>
-            <div class="ordered">
-              <div class="button-accodion-expan">
-                <mat-action-row>
-                  <button mat-raised-button (click)="ville = lieu.ville ; pays=lieu.pays; voirMeteo(); ">Voir la Meteo</button>
-                </mat-action-row>
+
+        <mat-accordion class="accordeon"  >
+          <!-- <app-lieu (changeMeteo)="setMeteo($event)" (refresh)="refresh()" *ngFor="let lieu of listeLieu" [pays]="lieu.pays" [region]="lieu.region" class="appLieu"
+                     [position]="lieu.coords" [ville]="lieu.ville"></app-lieu>-->
+          <cdk-virtual-scroll-viewport itemSize="50" style="height: 500px">
+            <mat-expansion-panel *cdkVirtualFor="let lieu of listeLieu">
+              <mat-expansion-panel-header>
+                <mat-panel-title style="margin-right: 10px">{{lieu.ville}}</mat-panel-title>
+                <mat-panel-description>{{lieu.pays}}</mat-panel-description>
+              </mat-expansion-panel-header>
+              <div class="ordered">
+                <div class="button-accodion-expan">
+                  <mat-action-row>
+                    <button mat-raised-button (click)="ville = lieu.ville ; pays=lieu.pays; voirMeteo(); ">Voir la Meteo</button>
+                  </mat-action-row>
+                </div>
+                <div class="button-accodion-expan">
+                  <mat-action-row>
+                    <button mat-raised-button (click)="ville = lieu.ville; supprimerLieu()">Supprimer Lieu</button>
+                  </mat-action-row>
+                </div>
               </div>
-              <div class="button-accodion-expan">
-                <mat-action-row>
-                  <button mat-raised-button (click)="ville = lieu.ville; supprimerLieu()">Supprimer Lieu</button>
-                </mat-action-row>
-              </div>
-            </div>
-          </mat-expansion-panel>
+            </mat-expansion-panel>
+
+          </cdk-virtual-scroll-viewport>
         </mat-accordion>
+
       </div>
     </div>
   </mat-sidenav-content>

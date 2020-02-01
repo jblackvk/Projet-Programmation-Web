@@ -22,8 +22,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatAutocompleteModule} from '@angular/material';
 import { LieuComponent } from './lieu/lieu.component';
 import {SettingsComponent} from './settings/settings.component';
-import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkVirtualForOf, CdkVirtualScrollViewport, ScrollDispatchModule, ScrollingModule} from '@angular/cdk/scrolling';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {CdkAccordionModule} from "@angular/cdk/accordion";
+import {CdkTreeModule} from "@angular/cdk/tree";
+import {CdkStepperModule} from "@angular/cdk/stepper";
+import {CdkTableModule} from "@angular/cdk/table";
 
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -48,14 +52,17 @@ const appRoutes: Routes = [
     WeatherComponent,
     LieuComponent,
     SettingsComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CdkAccordionModule,
+    CdkTreeModule,
     MaterialCompModule,
     FormsModule,
+    CdkStepperModule,
+    CdkTableModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     MatExpansionModule,
