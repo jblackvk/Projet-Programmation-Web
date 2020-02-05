@@ -32,10 +32,10 @@ import {CdkTableModule} from "@angular/cdk/table";
 const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
+  {path: 'home',  component: HomeComponent},
   {path: 'location', canActivate: [AuthGuard], component: LocationComponent},
-  {path: 'weather', canActivate: [AuthGuard], component: WeatherComponent},
-  {path: '', component: WeatherComponent},
+  {path: 'weather', canActivate: [AuthGuard],  component: WeatherComponent},
+  {path: '', canActivate: [AuthGuard], component: WeatherComponent},
   {path: 'NOT-FOUND', component: NotFoundComponent},
   {path: '**', redirectTo: '/NOT-FOUND'}
 ];

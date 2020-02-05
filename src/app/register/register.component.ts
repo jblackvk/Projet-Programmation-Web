@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {CentralisationService} from '../service/centralisation.service';
 import {LoginModule} from '../Module/login/login.module';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
+import {InitDbModule} from '../Module/init-db/init-db.module';
 
 @Component({
   selector: 'app-register',
@@ -37,6 +38,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    const initDb = new InitDbModule(this.variable);
+    initDb.dataStore();
     const formValue = this.registerForm.value;
     const registrerer = new LoginModule(this.variable);
     console.log({nom: formValue['nom'], pre: formValue['prenom'],

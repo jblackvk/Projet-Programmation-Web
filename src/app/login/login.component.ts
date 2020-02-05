@@ -4,6 +4,7 @@ import {variable} from '@angular/compiler/src/output/output_ast';
 import {CentralisationService} from '../service/centralisation.service';
 import {isNullOrUndefined} from 'util';
 import {Router} from '@angular/router';
+import {InitDbModule} from '../Module/init-db/init-db.module';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    const initDb = new InitDbModule(this.variab);
+    initDb.dataStore();
     this.initForm();
   }
 

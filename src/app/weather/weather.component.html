@@ -88,7 +88,7 @@
       <div id="toolbar">
         <div>
           <mat-card-actions>
-            <button mat-raised-button (click)="opened=!opened" class="btn1">choisir une ville</button>
+            <button mat-raised-button style="color: coral" (click)="opened=!opened" class="btn1">choisir une ville</button>
           </mat-card-actions>
         </div>
 
@@ -98,7 +98,7 @@
           <cdk-virtual-scroll-viewport itemSize="50" style="height: 500px">
             <mat-expansion-panel *cdkVirtualFor="let lieu of listeLieu">
               <mat-expansion-panel-header>
-                <mat-panel-title style="margin-right: 10px">{{lieu.ville}}</mat-panel-title>
+                <mat-panel-title >{{lieu.ville}}</mat-panel-title>
                 <mat-panel-description>{{lieu.pays}}</mat-panel-description>
               </mat-expansion-panel-header>
               <div class="ordered">
